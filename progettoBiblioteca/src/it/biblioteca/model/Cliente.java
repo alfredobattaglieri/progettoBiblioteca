@@ -17,6 +17,10 @@ public class Cliente extends Persona{
 		this.idCodiceCliente = idCodiceCliente;
 	}
 	
+	public Cliente() {
+		// TODO Auto-generated constructor stub
+	}
+
 	//to string
 	@Override
 	public String toString() {
