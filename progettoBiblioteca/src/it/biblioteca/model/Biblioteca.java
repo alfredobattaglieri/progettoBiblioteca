@@ -9,17 +9,31 @@ public class Biblioteca {
 	ArrayList<Horror> lista_libro_horror;
 	ArrayList<Thriller> lista_libro_thriller;
 	ArrayList<Bibliotecario> list_bibliotecario;
+	ArrayList<Romanzo> lista_libro_romanzo;
+	ArrayList<Storia> lista_libro_storia;
+	
+	
 	public String getNome() {
 		return nome;
 	}
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
-	public List<Libro> getLista_libro() {
-		return lista_libro;
+	
+	
+	
+	public ArrayList<Romanzo> getLista_libro_romanzo() {
+		return lista_libro_romanzo;
 	}
-	
-	
+	public void setLista_libro_romanzo(ArrayList<Romanzo> lista_libro_romanzo) {
+		this.lista_libro_romanzo = lista_libro_romanzo;
+	}
+	public ArrayList<Storia> getLista_libro_storia() {
+		return lista_libro_storia;
+	}
+	public void setLista_libro_storia(ArrayList<Storia> lista_libro_storia) {
+		this.lista_libro_storia = lista_libro_storia;
+	}
 	public ArrayList<Bibliotecario> getList_bibliotecario() {
 		return list_bibliotecario;
 	}
@@ -41,12 +55,15 @@ public class Biblioteca {
 		this.lista_libro_thriller = lista_libro_thriller;
 	}
 	public Biblioteca(String nome, ArrayList<Horror> lista_libro_horror, ArrayList<Thriller> lista_libro_thriller,
-			ArrayList<Bibliotecario> list_bibliotecario) {
+			ArrayList<Bibliotecario> list_bibliotecario, ArrayList<Romanzo> lista_libro_romanzo,
+			ArrayList<Storia> lista_libro_storia) {
 		super();
 		this.nome = nome;
 		this.lista_libro_horror = lista_libro_horror;
 		this.lista_libro_thriller = lista_libro_thriller;
 		this.list_bibliotecario = list_bibliotecario;
+		this.lista_libro_romanzo = lista_libro_romanzo;
+		this.lista_libro_storia = lista_libro_storia;
 	}
 	
 	
