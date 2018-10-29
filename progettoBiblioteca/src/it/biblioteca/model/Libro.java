@@ -10,7 +10,7 @@ public  abstract class Libro {
 	String autore;
 	int pagine;
 	
-	//get and set
+	//get and setters
 	
 	public long getId() {
 		return id;
