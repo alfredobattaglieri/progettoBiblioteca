@@ -24,6 +24,12 @@ public class Romanzo extends Libro {
 		super();
 		this.id = id;
 	}
+
+	public Romanzo(String titolo, String autore, int pagine, Genere romanzo) {
+
+	}
+
+	
 	
 	
 	

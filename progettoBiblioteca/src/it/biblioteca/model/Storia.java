@@ -21,6 +21,11 @@ public class Storia  extends Libro{
 		super();
 		this.id = id;
 	}
+
+	public Storia(String titolo, String autore, int pagine, Genere storia) {
+
+	}
+
 	
 	
 

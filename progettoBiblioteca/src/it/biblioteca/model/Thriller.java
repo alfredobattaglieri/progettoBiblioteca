@@ -27,4 +27,7 @@ public Thriller(long id, List<Film> listaThriller) {
 	this.id = id;
 	this.listaThriller = listaThriller;
 }
+public Thriller(String titolo, String autore, int pagine, Genere thriller) {
+}
+
 }

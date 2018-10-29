@@ -8,6 +8,7 @@ public class RegistaServiceImpl implements RegistaService {
 
 	@Override
 	public Regista creaRegista() {
+		return null;
 		
 	}
 
