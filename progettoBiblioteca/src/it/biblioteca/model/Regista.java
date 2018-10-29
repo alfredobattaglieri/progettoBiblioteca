@@ -30,6 +30,10 @@ public class Regista extends Persona{
 		this.idCodiceRegista = idCodiceRegista;
 	}
 
+	public Regista() {
+		// TODO Auto-generated constructor stub
+	}
+
 	@Override
 	public String toString() {
 		return "Regista [idCodiceRegista=" + idCodiceRegista + ", list_film=" + list_film + "]";

@@ -1,13 +1,18 @@
-package it.biblioteca.model;
+package it.biblioteca.Service;
 import java.util.Scanner;
-import it.biblioteca.Service.RegistaService;
+
+import it.biblioteca.model.Film;
+import it.biblioteca.model.Horror;
+import it.biblioteca.model.Regista;
+import it.biblioteca.model.Thriller;
 public class RegistaServiceImpl implements RegistaService {
 
 	@Override
 	public Regista creaRegista() {
+		Regista regista = new Regista();
 		Scanner input = new Scanner(System.in);
 		System.out.println("Inserire l'id");
-		Regista regista = new Regista(input.nextLong());
+		regista.setIdCodiceRegista(input.nextLong());
 		System.out.println("inserire nome e cognome");
 		regista.setNome(input.nextLine());
 		regista.setCognome(input.nextLine());
