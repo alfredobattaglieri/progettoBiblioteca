@@ -9,7 +9,7 @@ public class RegistaServiceImpl implements RegistaService {
 
 	@Override
 	public Regista creaRegista() {
-		Scanner input= new Scanner(System.in);
+		Scanner input = new Scanner(System.in);
 		System.out.println("Inserire l'id");
 		Regista regista=new Regista(input.nextLong());
 		System.out.println("inserire nome e cognome");
@@ -18,6 +18,7 @@ public class RegistaServiceImpl implements RegistaService {
 		System.out.println("inserisci l'età");
 		regista.setEta(input.nextInt());
 		return regista;
+		
 		
 		
 	}
