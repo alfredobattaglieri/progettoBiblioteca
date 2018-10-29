@@ -4,22 +4,12 @@ import java.util.List;
 
 public  abstract class Libro {
 
-	
-	
-	
-	long id;
 	String titolo;
 	String autore;
 	int pagine;
 	List<Libro> listaLibri;
 	//get and setters
 	
-	public long getId() {
-		return id;
-	}
-	public void setId(long id) {
-		this.id = id;
-	}
 	public String getTitolo() {
 		return titolo;
 	}
@@ -39,8 +29,6 @@ public  abstract class Libro {
 		this.pagine = pagine;
 	}
 	
-
-	
 	public List<Libro> getListaLibri() {
 		return listaLibri;
 	}
@@ -53,18 +41,11 @@ public  abstract class Libro {
 	
 	@Override
 	public String toString() {
-		return "Libro [id=" + id + ", titolo=" + titolo + ", autore=" + autore + ", pagine=" + pagine + ", listaLibri="
+		return "Libro [titolo=" + titolo + ", autore=" + autore + ", pagine=" + pagine + ", listaLibri="
 				+ listaLibri + "]";
 	}
 
-	public Libro(long id, String titolo, String autore, int pagine, List<Libro> listaLibri) {
-		super();
-		this.id = id;
-		this.titolo = titolo;
-		this.autore = autore;
-		this.pagine = pagine;
-		this.listaLibri = listaLibri;
-	}
+
 	public Libro() {
 		super();
 	}
