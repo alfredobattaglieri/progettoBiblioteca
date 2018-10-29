@@ -78,4 +78,16 @@ public class RegistaServiceImpl implements RegistaService {
 		return regista2;
 	}
 
+	@Override
+	public void associaRegistaHorror(Horror horror,Regista regista) {
+		horror.getList_registiHorror().add(regista);
+		
+	}
+
+	@Override
+	public void associaRegistaThriller(Thriller thriller, Regista regista) {
+		thriller.getList_registaThriller().add(regista);
+		
+	}
+
 }
