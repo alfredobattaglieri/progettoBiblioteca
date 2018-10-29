@@ -39,15 +39,16 @@ public class UtenteServiceImpl implements ClienteService{
 
 	@Override
 	public ArrayList<Libro> visualizzaTuttiLibri() {
-		// TODO Auto-generated method stub
+		
+			
+		}
 	
 			
 		
 		return null;
 	}
-
 	@Override
-	public ArrayList<Libro> visualizzaLibroPerGenere() {
+	public ArrayList<Libro> visualizzaLibroPerGenere(Long id, Libro libro) {
 		// TODO Auto-generated method stub
 		return null;
 	}

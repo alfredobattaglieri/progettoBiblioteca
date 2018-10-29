@@ -1,43 +1,76 @@
 package it.biblioteca.model;
-
-import java.util.ArrayList;
 import java.util.Scanner;
-
 import it.biblioteca.Service.RegistaService;
-
 public class RegistaServiceImpl implements RegistaService {
 
 	@Override
 	public Regista creaRegista() {
 		Scanner input = new Scanner(System.in);
 		System.out.println("Inserire l'id");
-		Regista regista=new Regista(input.nextLong());
+		Regista regista = new Regista(input.nextLong());
 		System.out.println("inserire nome e cognome");
 		regista.setNome(input.nextLine());
 		regista.setCognome(input.nextLine());
 		System.out.println("inserisci l'età");
 		regista.setEta(input.nextInt());
 		return regista;
-		
-		
-		
+
 	}
 
 	@Override
-	public ArrayList<Regista> visualizzaRegistaCheHaGiratoPiuFilm(Horror horror, Thriller trhiller) {
+	public Regista visualizzaRegistaCheHaGiratoPiuFilm(Horror horror, Thriller thriller) {
+		Regista regista1 = null;
+		Regista regista2 = null;
+		for (int i = 0; i < horror.getList_registiHorror().size(); i++) {
+			if (horror.getList_registiHorror().get(i).getList_film().size() > regista1.getList_film().size()) {
+				regista1 = horror.getList_registiHorror().get(i);
+			}
 
-		return null;
+			for (int j = 0; j < thriller.getList_registaThriller().size(); j++) {
+				if (thriller.getList_registaThriller().get(j).getList_film().size() > regista2.getList_film().size()) {
+					regista2 = thriller.getList_registaThriller().get(j);
+				}
+
+			}
+
+		}
+
+		if (regista1.getList_film().size() > regista2.getList_film().size()) {
+			return regista1;
+		}
+
+		else {
+			return regista2;
+		}
+
 	}
 
 	@Override
-	public ArrayList<Regista> visualizzaRegistaCheHaGiratoPiuFilmGenere() {
-		// TODO Auto-generated method stub
-		return null;
+	public Regista visualizzaRegistaCheHaGiratoPiuFilmGenere(Horror horror) {
+		Regista regista1 = null;
+		for (int i = 0; i < horror.getList_registiHorror().size(); i++) {
+			if (horror.getList_registiHorror().get(i).getList_film().size() > regista1.getList_film().size()) {
+				regista1 = horror.getList_registiHorror().get(i);
+			}
+		}
+		return regista1;
 	}
 
 	@Override
 	public void associaFilm(Regista regista, Film film) {
-		// TODO Auto-generated method stub
-		
+
 	}
+
+	@Override
+	public Regista visualizzaRegistaCheHaGiratoPiuFilmGenere(Thriller thriller) {
+		Regista regista2 = null;
+		for (int j = 0; j < thriller.getList_registaThriller().size(); j++) {
+			if (thriller.getList_registaThriller().get(j).getList_film().size() > regista2.getList_film().size()) {
+				regista2 = thriller.getList_registaThriller().get(j);
+			}
+
+		}
+		return regista2;
+	}
+
 }

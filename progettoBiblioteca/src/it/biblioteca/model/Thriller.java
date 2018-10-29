@@ -6,6 +6,16 @@ public class Thriller extends Libro{
 long id;
 List<Film> listaThriller;
 List<Thriller> listaLibriThriller;
+List<Regista> list_registaThriller;
+
+
+
+public List<Regista> getList_registaThriller() {
+	return list_registaThriller;
+}
+public void setList_registaThriller(List<Regista> list_registaThriller) {
+	this.list_registaThriller = list_registaThriller;
+}
 public long getId() {
 	return id;
 }
@@ -26,10 +36,11 @@ public void setListaLibriThriller(List<Thriller> listaLibriThriller) {
 	this.listaLibriThriller = listaLibriThriller;
 }
 
+
 @Override
 public String toString() {
 	return "Thriller [id=" + id + ", listaThriller=" + listaThriller + ", listaLibriThriller=" + listaLibriThriller
-			+ ", titolo=" + titolo + ", autore=" + autore + ", pagine=" + pagine + "]";
+			+ ", list_registaThriller=" + list_registaThriller + "]";
 }
 public Thriller(long id, List<Film> listaThriller, List<Thriller> listaLibriThriller) {
 	super();

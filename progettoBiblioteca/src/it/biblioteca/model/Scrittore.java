@@ -18,6 +18,9 @@ public class Scrittore extends Persona{
 		this.idCodiceScrittore = idCodiceScrittore;
 	}
 	
+	public Scrittore(String nome, String cognome, int eta) {
+	}
+
 	//to string
 	@Override
 	public String toString() {

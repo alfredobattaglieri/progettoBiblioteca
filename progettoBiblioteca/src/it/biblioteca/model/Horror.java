@@ -6,7 +6,16 @@ public class Horror extends Libro{
 long id;
 List<Film> listaHorror;
 List<Horror> listaLibriHorror;
+List<Regista> list_registiHorror;
 
+
+
+public List<Regista> getList_registiHorror() {
+	return list_registiHorror;
+}
+public void setList_registiHorror(List<Regista> list_registiHorror) {
+	this.list_registiHorror = list_registiHorror;
+}
 public long getId() {
 	return id;
 }
@@ -27,10 +36,11 @@ public void setListaLibriHorror(List<Horror> listaLibriHorror) {
 	this.listaLibriHorror = listaLibriHorror;
 }
 
+
 @Override
 public String toString() {
-	return "Horror [id=" + id + ", listaHorror=" + listaHorror + ", listaLibriHorror=" + listaLibriHorror + ", titolo="
-			+ titolo + ", autore=" + autore + ", pagine=" + pagine  + "]";
+	return "Horror [id=" + id + ", listaHorror=" + listaHorror + ", listaLibriHorror=" + listaLibriHorror
+			+ ", list_registiHorror=" + list_registiHorror + "]";
 }
 public Horror(long id, List<Film> listaHorror) {
 	super();

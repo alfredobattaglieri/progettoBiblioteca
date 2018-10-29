@@ -10,6 +10,9 @@ import it.biblioteca.model.Thriller;
 public interface RegistaService {
 	public Regista creaRegista();
 	public void associaFilm(Regista regista, Film film)
-;	public ArrayList<Regista> visualizzaRegistaCheHaGiratoPiuFilm(Horror horror, Thriller thriller);
-	public ArrayList<Regista> visualizzaRegistaCheHaGiratoPiuFilmGenere();
+;	public Regista visualizzaRegistaCheHaGiratoPiuFilm(Horror horror, Thriller thriller);
+	public Regista visualizzaRegistaCheHaGiratoPiuFilmGenere(Horror horror);
+	public Regista visualizzaRegistaCheHaGiratoPiuFilmGenere(Thriller thriller);
+	
+	
 }
