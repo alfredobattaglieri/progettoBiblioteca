@@ -1,9 +1,8 @@
 package it.biblioteca.Service;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 
+import it.biblioteca.model.Biblioteca;
 import it.biblioteca.model.Film;
 import it.biblioteca.model.Genere;
 import it.biblioteca.model.Horror;
@@ -12,8 +11,11 @@ import it.biblioteca.model.Thriller;
 
 public class FilmServiceImpl implements FilmService{
 	Scanner input=new java.util.Scanner(System.in);
-	
-	public void creaFilm(Horror horror,Thriller thriller) {
+		
+	public void creaFilm() {
+		Horror horror = null;
+		Thriller thriller = null;
+		
 		System.out.println("INSERISCI NUOVO FILM:");
 		System.out.println("ID:");
 		long id = input.nextLong();
@@ -26,18 +28,51 @@ public class FilmServiceImpl implements FilmService{
 		
 		if(genere.equals(Genere.HORROR)) {
 			Film film = new Film(id, titolo, durata, Genere.HORROR);
-			horror.getListaHorror().add(film);
+			//stampa lista libri horror
+			for(int i=0; i<horror.getListaLibriHorror().size(); i++) {
+				horror.getListaLibriHorror().get(i).toString();
+			}
+			associaLibroHorror(film, horror);
 		}
 		if(genere.equals(Genere.THRILLER)) {
 			Film film = new Film(id, titolo, durata, Genere.THRILLER);
-			thriller.getListaThriller().add(film);
+			//stampa lista libri thriller
+			for(int j=0; j<thriller.getListaLibriThriller().size(); j++) {
+				thriller.getListaLibriThriller().get(j).toString();
+			}
+			associaLibroThriller(film, thriller);
 		}
 	}
 	
 	@Override
-	public Libro visualizzaLibroIspiratoPiuFilm(Horror horror, Thriller thriller){
+	public Libro visualizzaLibroIspiratoPiuFilm(Biblioteca biblioteca){
 		Libro horrorPF = null;
 		Libro thrillerPF = null;
+		int contaH = 0;
+		
+		for(int i=0;i<biblioteca.getLista_libro_horror().size();i++) {
+			for(int j=0;j<biblioteca.getLista_libro_horror().get(i).getListaHorror().size();j++) {
+				if(horror.getListaHorror().size() > contaH) {
+					contaH = horror.getListaHorror().size();
+					horrorPF = horror.getListaLibriHorror().get(i);
+				}
+			}
+		}
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		
 		int contaH = 0;
 		for(int i=0; i<horror.getListaLibriHorror().size(); i++) {
@@ -60,6 +95,15 @@ public class FilmServiceImpl implements FilmService{
 		else {
 			return thrillerPF;
 		}	
+	}
+
+	@Override
+	public void associaLibroHorror(Film film, Horror horror) {
+		horror.getListaHorror().add(film);
+	}
+	@Override
+	public void associaLibroThriller(Film film, Thriller thriller) {
+		thriller.getListaThriller().add(film);
 	}
 }
 	
