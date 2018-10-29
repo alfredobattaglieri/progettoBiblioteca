@@ -11,10 +11,13 @@ public class RegistaServiceImpl implements RegistaService {
 	public Regista creaRegista() {
 		Regista regista = new Regista();
 		Scanner input = new Scanner(System.in);
-		System.out.println("Inserire l'id");
+		System.out.println("Inserire codice regista");
 		regista.setIdCodiceRegista(input.nextLong());
-		System.out.println("inserire nome e cognome");
+		System.out.println("inserire id");
+		regista.setId(input.nextLong());
+		System.out.println("inserire nome");
 		regista.setNome(input.nextLine());
+		System.out.println("cognome");
 		regista.setCognome(input.nextLine());
 		System.out.println("inserisci l'età");
 		regista.setEta(input.nextInt());

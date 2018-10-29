@@ -1,7 +1,4 @@
 package it.biblioteca.Service;
-
-import java.util.ArrayList;
-
 import it.biblioteca.model.Film;
 import it.biblioteca.model.Horror;
 import it.biblioteca.model.Regista;
