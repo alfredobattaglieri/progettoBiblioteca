@@ -13,8 +13,7 @@ public class Storia  extends Libro{
 // to string
 	@Override
 	public String toString() {
-		return "Storia [id=" + id + ", titolo=" + titolo + ", autore=" + autore + ", pagine=" + pagine + ", listaLibri="
-				+ listaLibri + "]";
+		return "Storia [id=" + id + ", titolo=" + titolo + ", autore=" + autore + ", pagine=" + pagine  + "]";
 	}
 //costruttore
 	public Storia(long id) {

@@ -7,7 +7,6 @@ public  abstract class Libro {
 	String titolo;
 	String autore;
 	int pagine;
-	List<Libro> listaLibri;
 	//get and setters
 	
 	public String getTitolo() {
@@ -28,20 +27,13 @@ public  abstract class Libro {
 	public void setPagine(int pagine) {
 		this.pagine = pagine;
 	}
-	
-	public List<Libro> getListaLibri() {
-		return listaLibri;
-	}
-	public void setListaLibri(List<Libro> listaLibri) {
-		this.listaLibri = listaLibri;
-	}
+
 	
 	//costruttore
 	
 	@Override
 	public String toString() {
-		return "Libro [titolo=" + titolo + ", autore=" + autore + ", pagine=" + pagine + ", listaLibri="
-				+ listaLibri + "]";
+		return "Libro [titolo=" + titolo + ", autore=" + autore + ", pagine=" + pagine +   "]";
 	}
 	public Libro() {
 		super();
