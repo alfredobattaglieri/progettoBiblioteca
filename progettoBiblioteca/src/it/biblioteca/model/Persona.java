@@ -6,11 +6,7 @@ public abstract class Persona {
 	String cognome;
 	int eta;
 	
-	
-	
-	public Persona() {
-		super();
-	}
+	//Get and Set
 	public long getId() {
 		return id;
 	}
@@ -35,6 +31,8 @@ public abstract class Persona {
 	public void setEta(int eta) {
 		this.eta = eta;
 	}
+	
+	//to string
 	@Override
 	public String toString() {
 		return "Persona [id=" + id + ", nome=" + nome + ", cognome=" + cognome + ", eta=" + eta + "]";
