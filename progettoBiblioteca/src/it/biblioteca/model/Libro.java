@@ -1,5 +1,7 @@
 package it.biblioteca.model;
 
+import java.util.List;
+
 public  abstract class Libro {
 
 	
@@ -9,7 +11,7 @@ public  abstract class Libro {
 	String titolo;
 	String autore;
 	int pagine;
-	
+	List<Libro> listaLibri;
 	//get and setters
 	
 	public long getId() {
@@ -37,21 +39,31 @@ public  abstract class Libro {
 		this.pagine = pagine;
 	}
 	
-	//to string
+
 	
-	@Override
-	public String toString() {
-		return "Libro [id=" + id + ", titolo=" + titolo + ", autore=" + autore + ", pagine=" + pagine + "]";
+	public List<Libro> getListaLibri() {
+		return listaLibri;
 	}
+	public void setListaLibri(List<Libro> listaLibri) {
+		this.listaLibri = listaLibri;
+	}
+	
 	
 	//costruttore
 	
-	public Libro(long id, String titolo, String autore, int pagine) {
+	@Override
+	public String toString() {
+		return "Libro [id=" + id + ", titolo=" + titolo + ", autore=" + autore + ", pagine=" + pagine + ", listaLibri="
+				+ listaLibri + "]";
+	}
+
+	public Libro(long id, String titolo, String autore, int pagine, List<Libro> listaLibri) {
 		super();
 		this.id = id;
 		this.titolo = titolo;
 		this.autore = autore;
 		this.pagine = pagine;
+		this.listaLibri = listaLibri;
 	}
 	public Libro() {
 		super();
