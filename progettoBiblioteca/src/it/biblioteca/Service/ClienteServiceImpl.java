@@ -4,13 +4,14 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
+import it.biblioteca.model.Biblioteca;
 import it.biblioteca.model.Cliente;
 import it.biblioteca.model.Genere;
 import it.biblioteca.model.Horror;
 import it.biblioteca.model.Libro;
 import it.biblioteca.model.Thriller;
 
-public class UtenteServiceImpl implements ClienteService{
+public class ClienteServiceImpl implements ClienteService{
 	Scanner input=new Scanner(System.in);
 	
 	@Override
@@ -32,31 +33,25 @@ public class UtenteServiceImpl implements ClienteService{
 	}
 
 	@Override
-	public void affittaLibro(Libro libro) {
-		// TODO Auto-generated method stub
+	public void affittaLibro(Libro libro,) {
+		
+		
 		
 	}
 
 	@Override
-	public ArrayList<Libro> visualizzaTuttiLibri() {
-		
-			
-		}
+	public List<Libro> visualizzaTuttiLibri(Biblioteca biblioteca) {
+		return  biblioteca.getLista_libro();
 	
-			
-		
-		return null;
 	}
 	@Override
-	public ArrayList<Libro> visualizzaLibroPerGenere(Long id, Libro libro) {
-		// TODO Auto-generated method stub
-		return null;
+	public List<Libro> visualizzaLibriHorror(Biblioteca biblioteca) {
+		return biblioteca.getLista_libro_horror();
 	}
 
 	@Override
-	public ArrayList<Libro> visualizzaLibroPerGenere(Long id, Libro libro) {
-		// TODO Auto-generated method stub
-		return null;
+	public List<Libro> visualizzaLibriThriller(Biblioteca biblioteca) {
+		return biblioteca.getLista_libro_thriller();
 	}
 
 }

@@ -6,8 +6,8 @@ import java.util.List;
 public class Biblioteca {
 	
 	String nome;
-	ArrayList<Horror> lista_libro_horror;
-	ArrayList<Thriller> lista_libro_thriller;
+	ArrayList<Libro> lista_libro_horror;
+	ArrayList<Libro> lista_libro_thriller;
 	ArrayList<Bibliotecario> list_bibliotecario;
 	public String getNome() {
 		return nome;
@@ -16,7 +16,7 @@ public class Biblioteca {
 		this.nome = nome;
 	}
 	public List<Libro> getLista_libro() {
-		return lista_libro;
+		return getLista_libro();
 	}
 	
 	
@@ -28,19 +28,19 @@ public class Biblioteca {
 	}
 
 	
-	public ArrayList<Horror> getLista_libro_horror() {
+	public ArrayList<Libro> getLista_libro_horror() {
 		return lista_libro_horror;
 	}
-	public void setLista_libro_horror(ArrayList<Horror> lista_libro_horror) {
+	public void setLista_libro_horror(ArrayList<Libro> lista_libro_horror) {
 		this.lista_libro_horror = lista_libro_horror;
 	}
-	public ArrayList<Thriller> getLista_libro_thriller() {
+	public ArrayList<Libro> getLista_libro_thriller() {
 		return lista_libro_thriller;
 	}
-	public void setLista_libro_thriller(ArrayList<Thriller> lista_libro_thriller) {
+	public void setLista_libro_thriller(ArrayList<Libro> lista_libro_thriller) {
 		this.lista_libro_thriller = lista_libro_thriller;
 	}
-	public Biblioteca(String nome, ArrayList<Horror> lista_libro_horror, ArrayList<Thriller> lista_libro_thriller,
+	public Biblioteca(String nome, ArrayList<Libro> lista_libro_horror, ArrayList<Libro> lista_libro_thriller,
 			ArrayList<Bibliotecario> list_bibliotecario) {
 		super();
 		this.nome = nome;
