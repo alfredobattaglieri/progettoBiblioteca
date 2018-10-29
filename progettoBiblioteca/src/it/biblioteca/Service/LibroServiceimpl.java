@@ -11,7 +11,7 @@ import it.biblioteca.model.Thriller;
 public class LibroServiceimpl implements LibroService {
 	Scanner input=new Scanner(System.in);
 	@Override
-	public void creaLibro(List<Horror>listaLibriHorror,List<Thriller>listaLibriThriller) {
+	public void creaLibro() {
 		System.out.println("crea il tuo Libro");
 		System.out.println("inserisci Titolo");
 		String titolo=input.nextLine();
@@ -25,11 +25,11 @@ public class LibroServiceimpl implements LibroService {
 		
 		if(genere.equals(Genere.HORROR)) {
 			Horror horror= new Horror(titolo, Autore,pagine,Genere.HORROR);
-			listaLibriHorror.add(horror);
+			horror.getListaLibriHorror().add(horror);
 		}	
 		else if(genere.equals(Genere.THRILLER)) {
 			Thriller thriller=new Thriller(titolo, Autore,pagine,Genere.THRILLER);
-			listaLibriThriller.add(thriller);
+			thriller.getListaLibriThriller().add(thriller);
 		}
 		
 	}
