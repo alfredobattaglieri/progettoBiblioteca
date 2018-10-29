@@ -22,12 +22,9 @@ public String toString() {
 	return "Thriller [id=" + id + ", listaThriller=" + listaThriller + ", titolo=" + titolo + ", autore=" + autore
 			+ ", pagine=" + pagine + "]";
 }
-public Thriller(long id, String titolo, String autore, int pagine, List<Libro> listaLibri, long id2,
-		List<Film> listaThriller) {
-	super(id, titolo, autore, pagine, listaLibri);
-	id = id2;
+public Thriller(long id, List<Film> listaThriller) {
+	super();
+	this.id = id;
 	this.listaThriller = listaThriller;
 }
-
-
 }

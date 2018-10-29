@@ -39,8 +39,5 @@ public abstract class Persona {
 	public String toString() {
 		return "Persona [id=" + id + ", nome=" + nome + ", cognome=" + cognome + ", eta=" + eta + "]";
 	}
-	
-	
-	
 }
 	

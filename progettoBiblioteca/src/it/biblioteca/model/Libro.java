@@ -36,7 +36,6 @@ public  abstract class Libro {
 		this.listaLibri = listaLibri;
 	}
 	
-	
 	//costruttore
 	
 	@Override
@@ -44,15 +43,7 @@ public  abstract class Libro {
 		return "Libro [titolo=" + titolo + ", autore=" + autore + ", pagine=" + pagine + ", listaLibri="
 				+ listaLibri + "]";
 	}
-
-
 	public Libro() {
 		super();
 	}
-	
-	
-	
-	
-	
-	
 }
