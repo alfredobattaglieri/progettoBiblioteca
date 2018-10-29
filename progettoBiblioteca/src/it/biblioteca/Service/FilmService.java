@@ -1,9 +1,11 @@
 package it.biblioteca.Service;
 
-import java.util.ArrayList;
 
+import it.biblioteca.model.Horror;
 import it.biblioteca.model.Libro;
+import it.biblioteca.model.Thriller;
 
 public interface FilmService {
-	public ArrayList<Libro> visualizzaLibroIspiratoPiuFilm();
+	public void creaFilm(Horror horror,Thriller thriller);
+	public Libro visualizzaLibroIspiratoPiuFilm(Horror horror, Thriller thriller);
 }
