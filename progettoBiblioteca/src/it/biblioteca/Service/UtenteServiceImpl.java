@@ -1,10 +1,14 @@
 package it.biblioteca.Service;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 import it.biblioteca.model.Cliente;
+import it.biblioteca.model.Genere;
+import it.biblioteca.model.Horror;
 import it.biblioteca.model.Libro;
+import it.biblioteca.model.Thriller;
 
 public class UtenteServiceImpl implements ClienteService{
 	Scanner input=new Scanner(System.in);
@@ -36,11 +40,14 @@ public class UtenteServiceImpl implements ClienteService{
 	@Override
 	public ArrayList<Libro> visualizzaTuttiLibri() {
 		// TODO Auto-generated method stub
+	
+			
+		
 		return null;
 	}
 
 	@Override
-	public ArrayList<Libro> visualizzaLibroPerGenere(Long id, Libro libro) {
+	public ArrayList<Libro> visualizzaLibroPerGenere() {
 		// TODO Auto-generated method stub
 		return null;
 	}

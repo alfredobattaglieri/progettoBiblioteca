@@ -17,7 +17,7 @@ public class Romanzo extends Libro {
 	@Override
 	public String toString() {
 		return "Romanzo [id=" + id + ", titolo=" + titolo + ", autore=" + autore + ", pagine=" + pagine
-				+ ", listaLibri=" + listaLibri + "]";
+				+  "]";
 	}
     //costruttore
 	public Romanzo(long id) {

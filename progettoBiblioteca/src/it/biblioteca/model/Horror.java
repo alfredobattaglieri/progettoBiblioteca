@@ -5,6 +5,7 @@ import java.util.List;
 public class Horror extends Libro{
 long id;
 List<Film> listaHorror;
+List<Horror> listaLibriHorror;
 
 public long getId() {
 	return id;
@@ -19,10 +20,17 @@ public void setListaHorror(List<Film> listaHorror) {
 	this.listaHorror = listaHorror;
 }
 
+public List<Horror> getListaLibriHorror() {
+	return listaLibriHorror;
+}
+public void setListaLibriHorror(List<Horror> listaLibriHorror) {
+	this.listaLibriHorror = listaLibriHorror;
+}
+
 @Override
 public String toString() {
-	return "Horror [id=" + id + ", listaHorror=" + listaHorror + ", titolo=" + titolo + ", autore=" + autore
-			+ ", pagine=" + pagine + "]";
+	return "Horror [id=" + id + ", listaHorror=" + listaHorror + ", listaLibriHorror=" + listaLibriHorror + ", titolo="
+			+ titolo + ", autore=" + autore + ", pagine=" + pagine  + "]";
 }
 public Horror(long id, List<Film> listaHorror) {
 	super();
