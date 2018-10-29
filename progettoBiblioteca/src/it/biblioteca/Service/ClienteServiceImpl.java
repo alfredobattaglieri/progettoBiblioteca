@@ -11,13 +11,13 @@ import it.biblioteca.model.Horror;
 import it.biblioteca.model.Libro;
 import it.biblioteca.model.Thriller;
 
-public class ClienteServiceImpl implements ClienteService{
-	Scanner input=new Scanner(System.in);
-	
+public class ClienteServiceImpl implements ClienteService {
+	Scanner input = new Scanner(System.in);
+
 	@Override
 	public Cliente creaCliente(String nome, String cognome, int eta, long idCodiceCliente) {
 		// TODO Auto-generated method stub
-		Cliente cliente= new Cliente();
+		Cliente cliente = new Cliente();
 		System.out.println("Crea cliente");
 		System.out.println("Inserisci nome");
 		cliente.setNome(input.nextLine());
@@ -33,17 +33,17 @@ public class ClienteServiceImpl implements ClienteService{
 	}
 
 	@Override
-	public void affittaLibro(Libro libro,) {
-		
-		
-		
+	public void affittaLibro(Libro libro, Cliente cliente) {
+		Scanner input = new Scanner(System.in);
+
 	}
 
 	@Override
 	public List<Libro> visualizzaTuttiLibri(Biblioteca biblioteca) {
-		return  biblioteca.getLista_libro();
-	
+		return biblioteca.getLista_libro();
+
 	}
+
 	@Override
 	public List<Libro> visualizzaLibriHorror(Biblioteca biblioteca) {
 		return biblioteca.getLista_libro_horror();
