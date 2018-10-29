@@ -32,26 +32,38 @@ public class ClienteServiceImpl implements ClienteService {
 		return cliente;
 	}
 
-	@Override
-	public void affittaLibro(Libro libro, Cliente cliente) {
-		Scanner input = new Scanner(System.in);
+		
+		
+
+		@Override
+		public void affittaLibro(Libro libro, Cliente cliente) {
+			Scanner input = new Scanner(System.in);
+			System.out.println("inserisci codice cliente  ");
+			long codiceCliente= input.nextLong();
+			if(codiceCliente==cliente.getIdCodiceCliente()&& libro.getDisponibilità()>0) {
+				System.out.println("inserire giorno e mese in questa modalità: 7-8");
+				libro.setData(input.nextLine());
+				cliente.getList_libro().add(libro);
+			}
+
+		}
+
+		@Override
+		public List<Libro> visualizzaTuttiLibri(Biblioteca biblioteca) {
+			return biblioteca.getLista_libro();
+
+		}
+
+		@Override
+		public List<Libro> visualizzaLibriHorror(Biblioteca biblioteca) {
+			return biblioteca.getLista_libro_horror();
+		}
+
+		@Override
+		public List<Libro> visualizzaLibriThriller(Biblioteca biblioteca) {
+			return biblioteca.getLista_libro_thriller();
+		}
 
 	}
-
-	@Override
-	public List<Libro> visualizzaTuttiLibri(Biblioteca biblioteca) {
-		return biblioteca.getLista_libro();
-
 	}
-
-	@Override
-	public List<Libro> visualizzaLibriHorror(Biblioteca biblioteca) {
-		return biblioteca.getLista_libro_horror();
-	}
-
-	@Override
-	public List<Libro> visualizzaLibriThriller(Biblioteca biblioteca) {
-		return biblioteca.getLista_libro_thriller();
-	}
-
 }
