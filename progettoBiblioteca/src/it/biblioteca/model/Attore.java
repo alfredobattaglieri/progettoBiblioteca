@@ -18,6 +18,10 @@ public class Attore extends Persona{
 		this.idCodiceAttore = idCodiceAttore;
 	}
 	
+	public Attore(String nome, String cognome, int eta) {
+
+	}
+
 	//to string
 	@Override
 	public String toString() {
