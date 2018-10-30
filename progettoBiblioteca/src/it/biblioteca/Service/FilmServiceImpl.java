@@ -54,18 +54,20 @@ public class FilmServiceImpl implements FilmService{
 		int contaT = 0;
 		
 		for(int i=0;i<biblioteca.getLista_libro_horror().size();i++) {
-			for(int j=0;j<biblioteca.getLista_libro_horror().get(i).getListaHorror().size();j++) {
-				if(biblioteca.getLista_libro_horror().get(i).getListaHorror().size() > contaH) {
-					contaH = biblioteca.getLista_libro_horror().get(i).getListaHorror().size();
+			Horror horror = (Horror) biblioteca.getLista_libro_horror().get(i);
+			for(int j=0;j<horror.getListaHorror().size();j++) {
+				if(horror.getListaHorror().size() > contaH) {
+					contaH = horror.getListaHorror().size();
 					horrorPF = biblioteca.getLista_libro_horror().get(i);
 				}
 			}
 		}
 		
 		for(int i=0;i<biblioteca.getLista_libro_thriller().size();i++) {
-			for(int j=0;j<biblioteca.getLista_libro_thriller().get(i).getListaThriller().size();j++) {
-				if(biblioteca.getLista_libro_thriller().get(j).getListaThriller().size() > contaH) {
-					contaT = biblioteca.getLista_libro_thriller().get(j).getListaThriller().size();
+			Thriller thriller = (Thriller) biblioteca.getLista_libro_thriller().get(i);
+			for(int j=0;j<thriller.getListaThriller().size();j++) {
+				if(thriller.getListaThriller().size() > contaH) {
+					contaT = thriller.getListaThriller().size();
 					thrillerPF = biblioteca.getLista_libro_thriller().get(i);
 				}
 			}
