@@ -93,6 +93,8 @@ public class RegistaServiceImpl implements RegistaService {
 		thriller.getList_registaThriller().add(regista);
 		
 	}
+	
+
 
 
 }

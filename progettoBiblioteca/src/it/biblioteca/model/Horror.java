@@ -53,5 +53,10 @@ public String toString() {
 	return "Horror [id=" + id + ", listaHorror=" + listaHorror + ", listaLibriHorror=" + listaLibriHorror
 			+ ", list_registiHorror=" + list_registiHorror + "]";
 }
+public Horror() {
+	super();
+}
+
+
 
 }

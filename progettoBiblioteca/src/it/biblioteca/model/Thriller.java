@@ -51,4 +51,8 @@ public Thriller(long id, List<Film> listaThriller, List<Thriller> listaLibriThri
 public Thriller(String titolo, String autore, int pagine, String thriller) {
 
 }
+public Thriller() {
+	super();
+}
+
 }

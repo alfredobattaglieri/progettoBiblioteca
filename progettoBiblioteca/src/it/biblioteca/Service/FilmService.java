@@ -11,4 +11,5 @@ public interface FilmService {
 	public void visualizzaLibroIspiratoPiuFilm(Biblioteca biblioteca);
 	public void associaLibroHorror(Film film, Horror horror);
 	public void associaLibroThriller(Film film, Thriller thriller);
+	public Film scegliFilm(Horror horror,Thriller thriller);
 }

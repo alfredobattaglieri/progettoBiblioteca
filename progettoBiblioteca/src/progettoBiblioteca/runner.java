@@ -8,10 +8,13 @@ import it.biblioteca.Service.FilmService;
 import it.biblioteca.Service.FilmServiceImpl;
 import it.biblioteca.Service.LibroService;
 import it.biblioteca.Service.LibroServiceimpl;
+import it.biblioteca.Service.RegistaServiceImpl;
 import it.biblioteca.model.Biblioteca;
 import it.biblioteca.model.Bibliotecario;
 import it.biblioteca.model.Cliente;
+import it.biblioteca.model.Film;
 import it.biblioteca.model.Libro;
+import it.biblioteca.model.Regista;
 import it.biblioteca.model.Thriller;
 import it.biblioteca.model.Horror;
 
@@ -34,7 +37,9 @@ public class runner extends LibroServiceimpl{
 			//LibroService libro = null;
 			FilmServiceImpl film=new FilmServiceImpl();
 			LibroServiceimpl libro=new LibroServiceimpl();
-			
+			RegistaServiceImpl regista= new RegistaServiceImpl();
+			Horror horror= new Horror();
+			Thriller thriller=new Thriller();
 			switch(scelta) {
 				case 1:
 					System.out.println(biblioteca);
@@ -52,7 +57,13 @@ public class runner extends LibroServiceimpl{
 					break;
 				default:
 					System.out.println("Nessuna corrispondenza trovata!");
+				case 5:
+					Regista regista1= regista.creaRegista();
+					Film film1=film.scegliFilm(horror, thriller);
+					
+					
 			}
+			
 		}while(trovata);
 		
 

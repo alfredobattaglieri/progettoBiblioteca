@@ -76,12 +76,9 @@ public class FilmServiceImpl implements FilmService{
 		}
 				
 		if(contaH > contaT) {
-<<<<<<< HEAD
 			System.out.println(horrorPF);
-=======
-			System.out.println(horrorPF);;
->>>>>>> branch 'master' of https://github.com/alfredobattaglieri/progettoBiblioteca.git
-		}
+
+			System.out.println(horrorPF);}
 		else {
 			System.out.println(thrillerPF);
 		}	
@@ -94,6 +91,34 @@ public class FilmServiceImpl implements FilmService{
 	@Override
 	public void associaLibroThriller(Film film, Thriller thriller) {
 		thriller.getListaThriller().add(film);
+	}
+	@Override
+	public Film scegliFilm(Horror horror, Thriller thriller) {
+		System.out.println("scegliere 1 per Horror/ 2 per Thriller");
+		int c= input.nextInt();
+		switch(c) {
+		case 1:
+			for (int i = 0; i < horror.getListaHorror().size(); i++) {
+				System.out.println(i);
+				System.out.println(horror.getListaHorror().get(i));
+				
+			}
+			System.out.println("digita la posizione desiderata");
+			return horror.getListaHorror().get(input.nextInt());
+			
+			
+		case 2:
+			for (int i = 0; i < thriller.getListaThriller().size(); i++) {
+				System.out.println(i);
+				System.out.println(thriller.getListaThriller().get(i));
+				
+			}
+			System.out.println("digita la posizione desiderata");
+			return thriller.getListaThriller().get(input.nextInt());
+				
+		}
+		return null;
+		
 	}
 }
 	
