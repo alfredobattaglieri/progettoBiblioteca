@@ -1,9 +1,6 @@
 package it.biblioteca.Service;
 
 import java.util.Scanner;
-
-import javax.management.StringValueExp;
-
 import it.biblioteca.model.Biblioteca;
 import it.biblioteca.model.Film;
 import it.biblioteca.model.Genere;
@@ -54,7 +51,6 @@ public class FilmServiceImpl implements FilmService{
 		Libro thrillerPF = null;
 		int contaH = 0;
 		int contaT = 0;
-		
 		for(int i=0;i<biblioteca.getLista_libro_horror().size();i++) {
 			Horror horror = (Horror) biblioteca.getLista_libro_horror().get(i);
 			for(int j=0;j<horror.getListaHorror().size();j++) {
@@ -76,10 +72,8 @@ public class FilmServiceImpl implements FilmService{
 		}
 				
 		if(contaH > contaT) {
-			System.out.println(horrorPF);
-
-			System.out.println(horrorPF);}
-		else {
+System.out.println(horrorPF);
+			} else {
 			System.out.println(thrillerPF);
 		}	
 	}
@@ -105,14 +99,11 @@ public class FilmServiceImpl implements FilmService{
 			}
 			System.out.println("digita la posizione desiderata");
 			return horror.getListaHorror().get(input.nextInt());
-			
-			
-		case 2:
+			case 2:
 			for (int i = 0; i < thriller.getListaThriller().size(); i++) {
 				System.out.println(i);
 				System.out.println(thriller.getListaThriller().get(i));
-				
-			}
+		}
 			System.out.println("digita la posizione desiderata");
 			return thriller.getListaThriller().get(input.nextInt());
 				

@@ -1,7 +1,5 @@
 package it.biblioteca.model;
 
-import java.util.List;
-
 public  abstract class Libro {
 
 	String titolo;
@@ -10,9 +8,6 @@ public  abstract class Libro {
 	int disponibilità;
 	String data;
 	String data_prelievo;
-	//get and setters
-	
-	
 	
 	public String getTitolo() {
 		return titolo;
@@ -50,19 +45,12 @@ public  abstract class Libro {
 	public void setPagine(int pagine) {
 		this.pagine = pagine;
 	}
-	
 	@Override
 	public String toString() {
 		return "Libro [titolo=" + titolo + ", autore=" + autore + ", pagine=" + pagine + ", disponibilità="
 				+ disponibilità + ", data=" + data + ", data_prelievo=" + data_prelievo + "]";
 	}
-
-	
-	//costruttore
-	
-	
 	public Libro() {
 		super();
 	}
-	
 }
