@@ -14,6 +14,9 @@ public class Film {
 		this.durata = durata;
 		this.genere = genere;
 	}
+	public Film() {
+		// TODO Auto-generated constructor stub
+	}
 	public Long getId() {
 		return id;
 	}

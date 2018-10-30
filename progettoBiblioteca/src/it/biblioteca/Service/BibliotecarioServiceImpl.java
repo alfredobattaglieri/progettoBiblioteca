@@ -5,6 +5,7 @@ import java.util.Scanner;
 
 import it.biblioteca.model.Bibliotecario;
 import it.biblioteca.model.Cliente;
+import it.biblioteca.model.Film;
 import it.biblioteca.model.Regista;
 
 public class BibliotecarioServiceImpl implements BibliotecarioService{
@@ -22,12 +23,6 @@ Scanner input=new Scanner(System.in);
 		input.nextLine();
 		bibliotecario.incrementaId(bibliotecario.getId());
 		return bibliotecario;
-	}
-
-	@Override
-	public ArrayList<Regista> visualizzachiHaGiratoPiuFilm() {
-		// TODO Auto-generated method stub
-		return null;
 	}
 
 	@Override
