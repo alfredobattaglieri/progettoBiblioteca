@@ -50,16 +50,43 @@ public class LibroServiceimpl implements LibroService {
 			
 		}	
 		else if(genere.equals(Genere.THRILLER.name())) {
-			Thriller thriller=new Thriller(titolo, Autore,pagine,Genere.THRILLER);
+			List<Film> listaThriller=new ArrayList<>();
+			List<Thriller> listaLibriThriller=new ArrayList<>();
+			List<Regista> list_registiThriller=new ArrayList<>();
+			
+			Thriller thriller=new Thriller(titolo, Autore,pagine,Genere.THRILLER.name());
+			thriller.setList_registaThriller(list_registiThriller);
+			thriller.setListaLibriThriller(listaLibriThriller);
+			thriller.setListaThriller(listaThriller);
 			biblioteca.getLista_libro_thriller().add(thriller);
+			biblioteca.setLista_libro_thriller(biblioteca.getLista_libro_thriller());
+			System.out.println(biblioteca);
 		}
 		else if(genere.equals(Genere.ROMANZO.name())) {
-			Romanzo romanzo=new Romanzo(titolo, Autore,pagine,Genere.ROMANZO);
+			List<Film> listaRomanzo=new ArrayList<>();
+			List<Romanzo> listaLibriRomanzo=new ArrayList<>();
+			List<Regista> list_registiRomanzo=new ArrayList<>();
+			
+			Romanzo romanzo=new Romanzo(titolo, Autore,pagine,Genere.ROMANZO.name());
+			romanzo.setList_registiRomanzo(list_registiRomanzo);
+			romanzo.setListaLibriRomanzo(listaLibriRomanzo);
+			romanzo.setListaRomanzo(listaRomanzo);
 			biblioteca.getLista_libro_romanzo().add(romanzo);
+			biblioteca.setLista_libro_romanzo(biblioteca.getLista_libro_romanzo());
+			System.out.println(biblioteca);
 		}
 		else if(genere.equals(Genere.STORIA.name())){
-			Storia storia=new Storia(titolo, Autore,pagine,Genere.STORIA);
+			List<Film> listaStoria=new ArrayList<>();
+			List<Storia> listaLibriStoria=new ArrayList<>();
+			List<Regista> list_registiStoria=new ArrayList<>();
+			
+			Storia storia=new Storia(titolo, Autore,pagine,Genere.ROMANZO.name());
+			storia.setList_registiStoria(list_registiStoria);
+			storia.setListaLibriStoria(listaLibriStoria);
+			storia.setListaStoria(listaStoria);
 			biblioteca.getLista_libro_storia().add(storia);
+			biblioteca.setLista_libro_storia(biblioteca.getLista_libro_storia());
+			System.out.println(biblioteca);
 		}
 		
 		return biblioteca;
