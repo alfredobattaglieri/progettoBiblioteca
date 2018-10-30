@@ -12,8 +12,8 @@ import it.biblioteca.model.Thriller;
 public class FilmServiceImpl implements FilmService{
 	Scanner input=new java.util.Scanner(System.in);
 		
-	public void creaFilm() {
-		Horror horror = null;
+	public void creaFilm(Biblioteca biblioteca) {
+		
 		Thriller thriller = null;
 		
 		System.out.println("INSERISCI NUOVO FILM:");
@@ -31,17 +31,21 @@ public class FilmServiceImpl implements FilmService{
 		if(genere.equals(Genere.HORROR)) {
 			Film film = new Film(id, titolo, durata, Genere.HORROR);
 			//stampa lista libri horror
-			for(int i=0; i<horror.getListaLibriHorror().size(); i++) {
-				horror.getListaLibriHorror().get(i).toString();
+			for(int i=0; i<biblioteca.getLista_libro_horror().size(); i++) {
+				biblioteca.getLista_libro_horror().get(i).toString();
 			}
+			System.out.println("SCEGLI IL LIBRO DA ASSOCIARE:");
+			int associaLibro = input.nextInt();
+			Horror horror = (Horror) biblioteca.getLista_libro_horror().get(associaLibro);
 			associaLibroHorror(film, horror);
 		}
 		if(genere.equals(Genere.THRILLER)) {
 			Film film = new Film(id, titolo, durata, Genere.THRILLER);
 			//stampa lista libri thriller
-			for(int j=0; j<thriller.getListaLibriThriller().size(); j++) {
-				thriller.getListaLibriThriller().get(j).toString();
+			for(int j=0; j<biblioteca.getLista_libro_thriller().size(); j++) {
+				biblioteca.getLista_libro_thriller().get(j).toString();
 			}
+			
 			associaLibroThriller(film, thriller);
 		}
 	}

@@ -38,7 +38,7 @@ public class runner extends LibroServiceimpl{
 					libro.creaLibro(biblioteca);
 					break;
 				case 2:
-					film.creaFilm();
+					film.creaFilm(biblioteca);
 					break;
 				case 3:
 					film.visualizzaLibroIspiratoPiuFilm(biblioteca);
