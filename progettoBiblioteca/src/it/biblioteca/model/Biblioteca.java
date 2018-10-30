@@ -96,6 +96,10 @@ public class Biblioteca {
 		this.lista_scrittori = lista_scrittori;
 		this.lista_registi = lista_registi;
 	}
-
+	
+	public Biblioteca(String nome) {
+		super();
+		this.nome = nome;
+	}
 	
 }

@@ -32,7 +32,7 @@ public class runner extends LibroServiceimpl{
 		ArrayList<Thriller> list_libro_thriller=new ArrayList<>();
 		ArrayList<Romanzo> list_libro_romanzo=new ArrayList<>();
 		ArrayList<Storia> list_libro_storia=new ArrayList<>();
-		Biblioteca biblioteca=new Biblioteca("LibriPerTutti", list_libro_horror, list_libro_thriller, lista_bibliotecario, list_libro_romanzo, list_libro_storia, null);
+		Biblioteca biblioteca=new Biblioteca("LibriPerTutti");
 		biblioteca.setLista_libro_horror(list_libro_horror);
 		biblioteca.setLista_libro_thriller(list_libro_thriller);
 		biblioteca.setLista_libro_romanzo(list_libro_romanzo);
@@ -60,7 +60,7 @@ public class runner extends LibroServiceimpl{
 					film.visualizzaLibroIspiratoPiuFilm(biblioteca);
 					break;
 				case 4:
-					Regista regista1= regista.creaRegista();
+					Regista regista1= regista.creaRegista(biblioteca);
 					Film film1=film.scegliFilm(horror, thriller);
 					break;
 				case 5:
