@@ -6,17 +6,16 @@ import java.util.Scanner;
 import it.biblioteca.model.Scrittore;
 
 public class ScrittoreServiceimpl implements ScrittoreService{
-
+	Scanner input= new Scanner(System.in);
 	@Override
 	public Scrittore CreaScrittore() {
-		Scanner Input= new Scanner(System.in);
-	    System.out.println("crea Scrittore");
+	   System.out.println("crea Scrittore");
 	    System.out.println("Inserisci nome");
-		String nome=Input.nextLine();
+		String nome=input.nextLine();
 	    System.out.println("Inserisci Cognome");
-		String cognome=Input.nextLine();
+		String cognome=input.nextLine();
 	    System.out.println("Inserisci età");
-		int eta=Input.nextInt();
+		int eta=input.nextInt();
 		Scrittore scrittore=new Scrittore(nome , cognome , eta);
 		long id= scrittore.incrementaId(scrittore.getId());
 		scrittore.setId(id);

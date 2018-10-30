@@ -1,12 +1,13 @@
 package it.biblioteca.model;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Horror extends Libro{
 long id;
 List<Film> listaHorror;
 List<Horror> listaLibriHorror;
-List<Regista> list_registiHorror;
+List<Regista> list_registiHorror=new ArrayList<>();
 
 
 

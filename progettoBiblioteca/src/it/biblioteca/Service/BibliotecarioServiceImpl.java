@@ -1,12 +1,9 @@
 package it.biblioteca.Service;
 
-import java.util.ArrayList;
 import java.util.Scanner;
-
 import it.biblioteca.model.Bibliotecario;
 import it.biblioteca.model.Cliente;
-import it.biblioteca.model.Film;
-import it.biblioteca.model.Regista;
+
 
 public class BibliotecarioServiceImpl implements BibliotecarioService{
 Scanner input=new Scanner(System.in);

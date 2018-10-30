@@ -1,12 +1,13 @@
 package it.biblioteca.model;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Thriller extends Libro{
 long id;
 List<Film> listaThriller;
 List<Thriller> listaLibriThriller;
-List<Regista> list_registaThriller;
+List<Regista> list_registaThriller=new ArrayList<>();
 
 
 

@@ -9,11 +9,10 @@ import it.biblioteca.model.Horror;
 import it.biblioteca.model.Regista;
 import it.biblioteca.model.Thriller;
 public class RegistaServiceImpl implements RegistaService {
-
+	Scanner input = new Scanner(System.in);
 	@Override
 	public Regista creaRegista() {
 		Regista regista = new Regista();
-		Scanner input = new Scanner(System.in);
 		long id=regista.incrementaId(regista.getId());
 		regista.setIdCodiceRegista(id);
 		System.out.println("inserire nome");

@@ -7,18 +7,17 @@ import it.biblioteca.model.Attore;
 
   
 public class Attoreserviceimpl implements AttoreService {
-
+	Scanner input= new Scanner(System.in);
 	@Override
 	
 	public Attore creaAttore() {
-		Scanner Input= new Scanner(System.in);
 	    System.out.println("crea attore");
 	    System.out.println("Inserisci nome");
-		String nome=Input.nextLine();
+		String nome=input.nextLine();
 	    System.out.println("Inserisci Cognome");
-		String cognome=Input.nextLine();
+		String cognome=input.nextLine();
 	    System.out.println("Inserisci età");
-		int eta=Input.nextInt();
+		int eta=input.nextInt();
 		Attore attore=new Attore(nome , cognome , eta);
 		long id=attore.incrementaId(attore.getId());
 		attore.setId(id);

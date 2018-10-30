@@ -1,12 +1,9 @@
 package it.biblioteca.Service;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
-
 import it.biblioteca.model.Biblioteca;
 import it.biblioteca.model.Cliente;
-import it.biblioteca.model.Genere;
 import it.biblioteca.model.Horror;
 import it.biblioteca.model.Libro;
 import it.biblioteca.model.Thriller;
@@ -38,7 +35,6 @@ public class ClienteServiceImpl implements ClienteService {
 
 		@Override
 		public void affittaLibro(Libro libro, Cliente cliente) {
-			Scanner input = new Scanner(System.in);
 			System.out.println("inserisci codice cliente  ");
 			long codiceCliente= input.nextLong();
 			if(codiceCliente==cliente.getIdCodiceCliente()&& libro.getDisponibilità()>0) {
@@ -64,6 +60,4 @@ public class ClienteServiceImpl implements ClienteService {
 		public List<Thriller> visualizzaLibriThriller(Biblioteca biblioteca) {
 			return biblioteca.getLista_libro_thriller();
 		}
-
-	
 }
