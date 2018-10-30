@@ -18,6 +18,8 @@ public class ScrittoreServiceimpl implements ScrittoreService{
 	    System.out.println("Inserisci età");
 		int eta=Input.nextInt();
 		Scrittore scrittore=new Scrittore(nome , cognome , eta);
+		long id= scrittore.incrementaId(scrittore.getId());
+		scrittore.setId(id);
 		return scrittore;
 	}
 

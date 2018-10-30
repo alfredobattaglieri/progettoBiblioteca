@@ -14,10 +14,8 @@ public class RegistaServiceImpl implements RegistaService {
 	public Regista creaRegista() {
 		Regista regista = new Regista();
 		Scanner input = new Scanner(System.in);
-		System.out.println("Inserire codice regista");
-		regista.setIdCodiceRegista(input.nextLong());
-		System.out.println("inserire id");
-		regista.setId(input.nextLong());
+		long id=regista.incrementaId(regista.getId());
+		regista.setIdCodiceRegista(id);
 		System.out.println("inserire nome");
 		regista.setNome(input.nextLine());
 		System.out.println("cognome");

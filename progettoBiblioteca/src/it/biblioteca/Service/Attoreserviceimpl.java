@@ -20,6 +20,8 @@ public class Attoreserviceimpl implements AttoreService {
 	    System.out.println("Inserisci età");
 		int eta=Input.nextInt();
 		Attore attore=new Attore(nome , cognome , eta);
+		long id=attore.incrementaId(attore.getId());
+		attore.setId(id);
 		return attore;
 		
 	    

@@ -37,5 +37,9 @@ public abstract class Persona {
 	public String toString() {
 		return "Persona [id=" + id + ", nome=" + nome + ", cognome=" + cognome + ", eta=" + eta + "]";
 	}
+	public Long incrementaId(long id) {
+		id=id+1;
+		return id;
+	}
 }
 	

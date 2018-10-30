@@ -15,7 +15,7 @@ public class ClienteServiceImpl implements ClienteService {
 	Scanner input = new Scanner(System.in);
 
 	@Override
-	public Cliente creaCliente(String nome, String cognome, int eta, long idCodiceCliente) {
+	public Cliente creaCliente(String nome, String cognome, int eta) {
 		// TODO Auto-generated method stub
 		Cliente cliente = new Cliente();
 		System.out.println("Crea cliente");
@@ -26,8 +26,9 @@ public class ClienteServiceImpl implements ClienteService {
 		System.out.println("Inserisci eta");
 		cliente.setEta(input.nextInt());
 		input.nextLine();
-		System.out.println("Inserisci codice cliente");
-		cliente.setIdCodiceCliente(input.nextLong());
+		long id=cliente.incrementaId(cliente.getIdCodiceCliente());
+		cliente.setId(id);
+		
 		input.nextLine();
 		return cliente;
 	}
