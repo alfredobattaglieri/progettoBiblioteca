@@ -79,7 +79,7 @@ public class FilmServiceImpl implements FilmService{
 				
 		if(contaH > contaT) {
 			System.out.println(horrorPF);
-		}
+		};
 		else {
 			System.out.println(thrillerPF);
 		}	
