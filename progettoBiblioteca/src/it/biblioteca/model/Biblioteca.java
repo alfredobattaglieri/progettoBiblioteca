@@ -21,9 +21,7 @@ public class Biblioteca {
 	}
 	public List<Libro> getLista_libro() {
 		return getLista_libro();
-	
-	}
-	
+    }	
 	public ArrayList<Romanzo> getLista_libro_romanzo() {
 		return lista_libro_romanzo;
 	}
@@ -55,7 +53,14 @@ public class Biblioteca {
 	public void setLista_libro_thriller(ArrayList<Libro> lista_libro_thriller) {
 		this.lista_libro_thriller = lista_libro_thriller;
 	}
+
 	//costruttore
+
+
+
+	public Biblioteca(String nome, ArrayList<Libro> lista_libro_horror, ArrayList<Libro> lista_libro_thriller,
+			ArrayList<Bibliotecario> list_bibliotecario) {
+	}
 	public Biblioteca(String nome, ArrayList<Libro> lista_libro_horror, ArrayList<Libro> lista_libro_thriller,
 			ArrayList<Bibliotecario> list_bibliotecario, ArrayList<Romanzo> lista_libro_romanzo,
 			ArrayList<Storia> lista_libro_storia) {
@@ -65,7 +70,7 @@ public class Biblioteca {
 		this.lista_libro_thriller = lista_libro_thriller;
 		this.list_bibliotecario = list_bibliotecario;
 		this.lista_libro_romanzo = lista_libro_romanzo;
-		this.lista_libro_storia = lista_libro_storia;
+		this.lista_libro_storia = lista_libro_storia; 
 	}
 	
 	public Biblioteca(String nome) {

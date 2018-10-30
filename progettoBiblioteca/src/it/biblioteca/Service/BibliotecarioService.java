@@ -12,6 +12,6 @@ public Bibliotecario creaBibliotecario(long id);
 public Libro creaLibro(long id);
 public ArrayList<Regista> visualizzachiHaGiratoPiuFilm();
 public Cliente visualizzaRitardoNellaConsegna();
-public Cliente visualizzaChiLeggeDiPiuUnGenere();
+public Cliente visualizzaChiLeggeDiPiuUnGenere();;
 
 }
