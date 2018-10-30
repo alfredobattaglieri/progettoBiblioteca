@@ -75,8 +75,11 @@ public class Biblioteca {
 		this.lista_libro_romanzo = lista_libro_romanzo;
 		this.lista_libro_storia = lista_libro_storia; 
 	}
+	public Biblioteca() {
+		super();
+	}
 
-	
+	   
 	
 	
 
