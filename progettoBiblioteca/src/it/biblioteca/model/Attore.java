@@ -1,7 +1,7 @@
 package it.biblioteca.model;
 
 public class Attore extends Persona{
-	long idCodiceAttore;
+	long idCodiceAttore;;
 	
 	//Get and Set
 	public long getIdCodiceAttore() {
