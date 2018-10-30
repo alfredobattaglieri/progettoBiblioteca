@@ -1,5 +1,6 @@
 package it.biblioteca.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 import it.biblioteca.model.Biblioteca;
@@ -12,22 +13,25 @@ public class ClienteServiceImpl implements ClienteService {
 	Scanner input = new Scanner(System.in);
 
 	@Override
-	public Cliente creaCliente(String nome, String cognome, int eta) {
+	public Cliente creaCliente(Biblioteca biblioteca) {
 		// TODO Auto-generated method stub
-		Cliente cliente = new Cliente();
+		ArrayList<Cliente> cliente;
+		
 		System.out.println("Crea cliente");
 		System.out.println("Inserisci nome");
-		cliente.setNome(input.nextLine());
+		String nome=input.nextLine();
 		System.out.println("Inserisci cognome");
-		cliente.setCognome(input.nextLine());
+		String cognome=input.nextLine();
 		System.out.println("Inserisci eta");
-		cliente.setEta(input.nextInt());
+		int eta=input.nextInt();
 		input.nextLine();
-		long id=cliente.incrementaId(cliente.getIdCodiceCliente());
-		cliente.setId(id);
+		long id=biblioteca.incrementaId(biblioteca.getCliente().size()+1);
+		//biblioteca.getCliente().add(biblioteca.getCliente().size()+1);
 		
-		input.nextLine();
-		return cliente;
+		
+		Cliente cliente1=new Cliente(nome , cognome , eta);
+		biblioteca.getCliente().add(cliente1);
+		return cliente1;
 	}
 
 		
