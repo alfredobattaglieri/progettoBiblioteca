@@ -37,19 +37,21 @@ public void setListaLibriHorror(List<Horror> listaLibriHorror) {
 }
 
 
-@Override
-public String toString() {
-	return "Horror [id=" + id + ", listaHorror=" + listaHorror + ", listaLibriHorror=" + listaLibriHorror
-			+ ", list_registiHorror=" + list_registiHorror + "]";
-}
+
 public Horror(long id, List<Film> listaHorror) {
 	super();
 	this.id = id;
 	this.listaHorror = listaHorror;
 }
 
-public Horror(String titolo, String autore, int pagine, Genere horror) {
+public Horror(String titolo, String autore, int pagine, String horror) {
 
+}
+
+@Override
+public String toString() {
+	return "Horror [id=" + id + ", listaHorror=" + listaHorror + ", listaLibriHorror=" + listaLibriHorror
+			+ ", list_registiHorror=" + list_registiHorror + "]";
 }
 
 }

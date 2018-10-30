@@ -25,6 +25,8 @@ public class runner extends LibroServiceimpl{
 		ArrayList<Horror> list_libro_horror=new ArrayList<>();
 		ArrayList<Thriller> list_libro_thriller=new ArrayList<>();
 		Biblioteca biblioteca=new Biblioteca("LibriPerTutti");
+		biblioteca.setLista_libro_horror(list_libro_horror);
+		biblioteca.setLista_libro_thriller(list_libro_thriller);
 		
 		do {
 			System.out.println("1-Crea Libro\n2-Crea Film\n3-VisualizzaLibroIspiratoPiuFilm\n4-Fine\nFai la tua scelta:");
@@ -35,6 +37,7 @@ public class runner extends LibroServiceimpl{
 			
 			switch(scelta) {
 				case 1:
+					System.out.println(biblioteca);
 					libro.creaLibro(biblioteca);
 					break;
 				case 2:
