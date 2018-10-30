@@ -34,12 +34,14 @@ public class Cliente extends Persona{
 		this.idCodiceCliente = idCodiceCliente;
 	}
 
-	public Cliente(long idCodiceCliente) {
-		super();
-		this.idCodiceCliente = idCodiceCliente;
-	}
+	
+	
 	
 	public Cliente() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public Cliente(String nome, String cognome, int eta) {
 		// TODO Auto-generated constructor stub
 	}
 
