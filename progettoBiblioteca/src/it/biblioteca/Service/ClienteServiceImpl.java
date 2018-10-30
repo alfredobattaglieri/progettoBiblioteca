@@ -64,6 +64,5 @@ public class ClienteServiceImpl implements ClienteService {
 			return biblioteca.getLista_libro_thriller();
 		}
 
-	}
-	}
+	
 }
