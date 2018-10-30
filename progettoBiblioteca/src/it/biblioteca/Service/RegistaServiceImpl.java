@@ -27,8 +27,8 @@ public class RegistaServiceImpl implements RegistaService {
 
 	@Override
 	public Regista visualizzaRegistaCheHaGiratoPiuFilm(Horror horror, Thriller thriller) {
-		Regista regista1 = null;
-		Regista regista2 = null;
+		Regista regista1 = new Regista();
+		Regista regista2 = new Regista();
 		for (int i = 0; i < horror.getList_registiHorror().size(); i++) {
 			if (horror.getList_registiHorror().get(i).getList_film().size() > regista1.getList_film().size()) {
 				regista1 = horror.getList_registiHorror().get(i);
@@ -55,7 +55,7 @@ public class RegistaServiceImpl implements RegistaService {
 
 	@Override
 	public Regista visualizzaRegistaCheHaGiratoPiuFilmGenere(Horror horror) {
-		Regista regista1 = null;
+		Regista regista1 = new Regista();
 		for (int i = 0; i < horror.getList_registiHorror().size(); i++) {
 			if (horror.getList_registiHorror().get(i).getList_film().size() > regista1.getList_film().size()) {
 				regista1 = horror.getList_registiHorror().get(i);
@@ -71,7 +71,7 @@ public class RegistaServiceImpl implements RegistaService {
 
 	@Override
 	public Regista visualizzaRegistaCheHaGiratoPiuFilmGenere(Thriller thriller) {
-		Regista regista2 = null;
+		Regista regista2 = new Regista();
 		for (int j = 0; j < thriller.getList_registaThriller().size(); j++) {
 			if (thriller.getList_registaThriller().get(j).getList_film().size() > regista2.getList_film().size()) {
 				regista2 = thriller.getList_registaThriller().get(j);
