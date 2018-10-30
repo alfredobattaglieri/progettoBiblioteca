@@ -56,12 +56,12 @@ public class ClienteServiceImpl implements ClienteService {
 		}
 
 		@Override
-		public List<Libro> visualizzaLibriHorror(Biblioteca biblioteca) {
+		public List<Horror> visualizzaLibriHorror(Biblioteca biblioteca) {
 			return biblioteca.getLista_libro_horror();
 		}
 
 		@Override
-		public List<Libro> visualizzaLibriThriller(Biblioteca biblioteca) {
+		public List<Thriller> visualizzaLibriThriller(Biblioteca biblioteca) {
 			return biblioteca.getLista_libro_thriller();
 		}
 
