@@ -25,8 +25,12 @@ public class Bibliotecario extends Persona{
 	//to string
 	@Override
 	public String toString() {
-		return "Bibliotecario [idCodiceBibliotecario=" + idCodiceBibliotecario + ", id=" + id + ", nome=" + nome
+		return "Bibliotecario [idCodiceBibliotecario=" + idCodiceBibliotecario + ", id=" + idCodiceBibliotecario + ", nome=" + nome
 				+ ", cognome=" + cognome + ", eta=" + eta + "]";
 	}
-	
+	public long incrementaId(long id) {
+		Biblioteca biblioteca=new Biblioteca();
+		id=biblioteca.getList_bibliotecario().size()+1;
+		return id;
+}
 }
