@@ -79,7 +79,7 @@ public class ClienteServiceImpl implements ClienteService {
 		@Override
 		public void visualizzaLibriThriller(Biblioteca biblioteca) {
 			for (int j = 0; j <biblioteca.getLista_libro_thriller().size(); j++) {
-				System.out.println(biblioteca.getLista_libro_thriller().get(j));
+				System.out.println(biblioteca.getLista_libro_thriller().get(j));;
 			}
 		}
 
