@@ -5,10 +5,19 @@ import java.util.List;
 public class Cliente extends Persona{
 	long idCodiceCliente;
 	List<Libro> list_libro;
+	int giorniDiRitardo;
 	
 
 	
 	
+	public int getGiorniDiRitardo() {
+		return giorniDiRitardo;
+	}
+
+	public void setGiorniDiRitardo(int giorniDiRitardo) {
+		this.giorniDiRitardo = giorniDiRitardo;
+	}
+
 	public List<Libro> getList_libro() {
 		return list_libro;
 	}
