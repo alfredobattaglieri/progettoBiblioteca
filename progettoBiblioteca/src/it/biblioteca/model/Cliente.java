@@ -1,9 +1,22 @@
 package it.biblioteca.model;
 
+import java.util.List;
+
 public class Cliente extends Persona{
 	long idCodiceCliente;
+	List<Libro> list_libro;
 	
-	//Get and Set
+
+	
+	
+	public List<Libro> getList_libro() {
+		return list_libro;
+	}
+
+	public void setList_libro(List<Libro> list_libro) {
+		this.list_libro = list_libro;
+	}
+
 	public long getIdCodiceCliente() {
 		return idCodiceCliente;
 	}
@@ -21,11 +34,11 @@ public class Cliente extends Persona{
 		// TODO Auto-generated constructor stub
 	}
 
-	//to string
 	@Override
 	public String toString() {
-		return "Cliente [idCodiceCliente=" + idCodiceCliente + ", id=" + id + ", nome=" + nome + ", cognome=" + cognome
-				+ ", eta=" + eta + "]";
+		return "Cliente [idCodiceCliente=" + idCodiceCliente + ", list_libro=" + list_libro + "]";
 	}
+
+	
 	
 }
