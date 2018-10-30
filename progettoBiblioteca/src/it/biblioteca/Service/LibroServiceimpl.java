@@ -39,7 +39,7 @@ public class LibroServiceimpl implements LibroService {
 			Romanzo romanzo=new Romanzo(titolo, Autore,pagine,Genere.ROMANZO);
 			biblioteca.getLista_libro_romanzo().add(romanzo);
 		}
-		else {
+		else if(genere.equals(Genere.STORIA)){
 			Storia storia=new Storia(titolo, Autore,pagine,Genere.STORIA);
 			biblioteca.getLista_libro_storia().add(storia);
 		}
