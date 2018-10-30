@@ -1,9 +1,10 @@
-package progettoBiblioteca;
+package it.biblioteca.runner;
 
 import java.util.ArrayList;
 import java.util.Scanner;
 
 import it.biblioteca.Service.ClienteService;
+import it.biblioteca.Service.ClienteServiceImpl;
 import it.biblioteca.Service.FilmService;
 import it.biblioteca.Service.FilmServiceImpl;
 import it.biblioteca.Service.LibroService;
@@ -31,14 +32,14 @@ public class runner extends LibroServiceimpl{
 		ArrayList<Thriller> list_libro_thriller=new ArrayList<>();
 		ArrayList<Romanzo> list_libro_romanzo=new ArrayList<>();
 		ArrayList<Storia> list_libro_storia=new ArrayList<>();
-		Biblioteca biblioteca=new Biblioteca("LibriPerTutti");
+		Biblioteca biblioteca=new Biblioteca("LibriPerTutti", list_libro_horror, list_libro_thriller, lista_bibliotecario, list_libro_romanzo, list_libro_storia, null);
 		biblioteca.setLista_libro_horror(list_libro_horror);
 		biblioteca.setLista_libro_thriller(list_libro_thriller);
 		biblioteca.setLista_libro_romanzo(list_libro_romanzo);
 		biblioteca.setLista_libro_storia(list_libro_storia);
 		
 		do {
-			System.out.println("1-Crea Libro\n2-Crea Film\n3-VisualizzaLibroIspiratoPiuFilm\n4-Crea Regista e Associa Film a Regista\n5-Elimina Libro\n6-Fine\nFai la tua scelta:");
+			System.out.println("1-Crea Libro\n2-Crea Film\n3-VisualizzaLibroIspiratoPiuFilm\n4-Crea Regista e Associa Film a Regista\n5-Elimina Libro\n6-Visualizza tutti i libri\n7-Visualizza Libri Horror\n8-Visualizza Libri Thriller\n9-Fine\nFai la tua scelta:");
 			int scelta = input.nextInt();
 			//LibroService libro = null;
 			FilmServiceImpl film=new FilmServiceImpl();
@@ -46,6 +47,7 @@ public class runner extends LibroServiceimpl{
 			RegistaServiceImpl regista= new RegistaServiceImpl();
 			Horror horror= new Horror();
 			Thriller thriller=new Thriller();
+			ClienteServiceImpl cliente=new ClienteServiceImpl();
 			switch(scelta) {
 				case 1:
 					System.out.println(biblioteca);
@@ -65,6 +67,14 @@ public class runner extends LibroServiceimpl{
 					libro.deleteLibro(biblioteca);
 					break;
 				case 6:
+					cliente.visualizzaTuttiLibri(biblioteca);
+					break;
+				case 7:
+					cliente.visualizzaLibriHorror(biblioteca);
+					break;
+				case 8:
+					cliente.visualizzaLibriThriller(biblioteca);
+				case 9:
 					System.out.println("Arrivederci ;)");
 					trovata = false;
 					break;
