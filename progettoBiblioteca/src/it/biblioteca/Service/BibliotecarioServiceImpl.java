@@ -23,7 +23,7 @@ Scanner input=new Scanner(System.in);
 		System.out.println("Inserisci eta");
 		bibliotecario.setEta(input.nextInt());
 		input.nextLine();
-		bibliotecario.incrementaId(bibliotecario.getId());
+		bibliotecario.incrementaId(bibliotecario.getIdCodiceBibliotecario());
 		return bibliotecario;
 	}
 
@@ -52,29 +52,7 @@ Scanner input=new Scanner(System.in);
 			if(cliente.getList_libro().size()> affitto_max) {
 				
 		}
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-	}
+			}
 
 	
 	

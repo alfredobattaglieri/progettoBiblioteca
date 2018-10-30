@@ -4,6 +4,7 @@ package it.biblioteca.Service;
 
 import java.util.Scanner;
 
+import it.biblioteca.model.Biblioteca;
 import it.biblioteca.model.Film;
 import it.biblioteca.model.Horror;
 import it.biblioteca.model.Regista;
@@ -11,9 +12,9 @@ import it.biblioteca.model.Thriller;
 public class RegistaServiceImpl implements RegistaService {
 	Scanner input = new Scanner(System.in);
 	@Override
-	public Regista creaRegista() {
+	public Regista creaRegista(Biblioteca biblioteca) {
 		Regista regista = new Regista();
-		long id=regista.incrementaId(regista.getId());
+		long id=regista.incrementaId(regista.getIdCodiceRegista());
 		regista.setIdCodiceRegista(id);
 		System.out.println("inserire nome");
 		regista.setNome(input.nextLine());
@@ -21,6 +22,7 @@ public class RegistaServiceImpl implements RegistaService {
 		regista.setCognome(input.nextLine());
 		System.out.println("inserisci l'età");
 		regista.setEta(input.nextInt());
+		biblioteca.getLista_registi().add(regista);
 		return regista;
 
 	}

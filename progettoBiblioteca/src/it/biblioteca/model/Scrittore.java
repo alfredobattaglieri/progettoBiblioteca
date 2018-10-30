@@ -24,8 +24,12 @@ public class Scrittore extends Persona{
 	//to string
 	@Override
 	public String toString() {
-		return "Scrittore [idCodiceScrittore=" + idCodiceScrittore + ", id=" + id + ", nome=" + nome + ", cognome="
+		return "Scrittore [idCodiceScrittore=" + idCodiceScrittore  + ", nome=" + nome + ", cognome="
 				+ cognome + ", eta=" + eta + "]";
 	}
-
+	public long incrementaId(long id) {
+		Biblioteca biblioteca=new Biblioteca();
+		id=biblioteca.getLista_scrittori().size()+1;
+		return id;
+}
 }

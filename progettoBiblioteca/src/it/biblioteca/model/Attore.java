@@ -1,7 +1,7 @@
 package it.biblioteca.model;
 
 public class Attore extends Persona{
-	long idCodiceAttore;;
+	long idCodiceAttore;
 	
 	//Get and Set
 	public long getIdCodiceAttore() {
@@ -27,5 +27,9 @@ public class Attore extends Persona{
 		return "Attore [idCodiceAttore=" + idCodiceAttore + ", nome=" + nome + ", cognome=" + cognome + ", eta=" + eta
 				+ "]";
 	}
-	
+	public long incrementaId(long id) {
+		Biblioteca biblioteca=new Biblioteca();
+		id=biblioteca.getLista_attore().size()+1;
+		return id;
+}
 }

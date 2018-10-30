@@ -40,5 +40,9 @@ public class Regista extends Persona{
 	}
 	
 	//to string
-		
+	public long incrementaId(long id) {
+		Biblioteca biblioteca=new Biblioteca();
+		id=biblioteca.getLista_registi().size()+1;
+		return id;	
+	}	
 }
