@@ -21,8 +21,10 @@ public class FilmServiceImpl implements FilmService{
 		long id = input.nextLong();
 		System.out.println("TITOLO:");
 		String titolo=input.nextLine();
+		input.nextLine();
 		System.out.println("DURATA:");
 		int durata = input.nextInt();
+		input.nextLine();
 		System.out.println("GENERE:");
 		String genere = input.nextLine();
 		
@@ -45,55 +47,35 @@ public class FilmServiceImpl implements FilmService{
 	}
 	
 	@Override
-	public Libro visualizzaLibroIspiratoPiuFilm(Biblioteca biblioteca){
+	public void visualizzaLibroIspiratoPiuFilm(Biblioteca biblioteca){
 		Libro horrorPF = null;
 		Libro thrillerPF = null;
 		int contaH = 0;
+		int contaT = 0;
 		
 		for(int i=0;i<biblioteca.getLista_libro_horror().size();i++) {
 			for(int j=0;j<biblioteca.getLista_libro_horror().get(i).getListaHorror().size();j++) {
-				if(horror.getListaHorror().size() > contaH) {
-					contaH = horror.getListaHorror().size();
-					horrorPF = horror.getListaLibriHorror().get(i);
+				if(biblioteca.getLista_libro_horror().get(i).getListaHorror().size() > contaH) {
+					contaH = biblioteca.getLista_libro_horror().get(i).getListaHorror().size();
+					horrorPF = biblioteca.getLista_libro_horror().get(i);
 				}
 			}
 		}
 		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		int contaH = 0;
-		for(int i=0; i<horror.getListaLibriHorror().size(); i++) {
-			if(horror.getListaHorror().size() > contaH) {
-				contaH = horror.getListaHorror().size();
-				horrorPF = horror.getListaLibriHorror().get(i);
+		for(int i=0;i<biblioteca.getLista_libro_thriller().size();i++) {
+			for(int j=0;j<biblioteca.getLista_libro_thriller().get(i).getListaThriller().size();j++) {
+				if(biblioteca.getLista_libro_thriller().get(j).getListaThriller().size() > contaH) {
+					contaT = biblioteca.getLista_libro_thriller().get(j).getListaThriller().size();
+					thrillerPF = biblioteca.getLista_libro_thriller().get(i);
+				}
 			}
 		}
-		int contaT = 0;
-		for(int j=0; j<thriller.getListaLibriThriller().size(); j++) {
-			if(thriller.getListaThriller().size() > contaT) {
-				contaT = thriller.getListaThriller().size();
-				thrillerPF = thriller.getListaLibriThriller().get(j);
-			}
-		}
-		
+				
 		if(contaH > contaT) {
-			return horrorPF;
+			System.out.println(horrorPF);
 		}
 		else {
-			return thrillerPF;
+			System.out.println(thrillerPF);
 		}	
 	}
 
