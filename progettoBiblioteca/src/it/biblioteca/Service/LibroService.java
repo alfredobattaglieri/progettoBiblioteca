@@ -5,6 +5,5 @@ import it.biblioteca.model.Biblioteca;
 public interface LibroService {
 	
 	public Biblioteca creaLibro(Biblioteca biblioteca);
-	
-	public void deleteLibro(Long id);
+	public void deleteLibro(Biblioteca biblioteca);
 }

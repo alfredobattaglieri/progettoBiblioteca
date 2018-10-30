@@ -21,7 +21,7 @@ public class LibroServiceimpl implements LibroService {
 	@Override
 	public Biblioteca creaLibro(Biblioteca biblioteca) {
 		
-		System.out.println("crea il tuo Libro");
+		System.out.println("Crea il tuo Libro");
 		System.out.println("inserisci Titolo");
 		String titolo=input.nextLine();
 		System.out.println("inserisci Autore");
@@ -31,9 +31,6 @@ public class LibroServiceimpl implements LibroService {
 		input.nextLine();
 		System.out.println("inserisci Genere");
 		String genere=input.nextLine();
-		
-		
-		
 		
 		if(genere.equals(Genere.HORROR.name())) {
 			List<Film> listaHorror=new ArrayList<>();
@@ -92,20 +89,46 @@ public class LibroServiceimpl implements LibroService {
 		return biblioteca;
 		
 	}
-		
-		
-		
-		
-		
-		@Override
-	public void deleteLibro(Long id) {
-		
+	
+	@Override
+	public void deleteLibro(Biblioteca biblioteca) {
+		System.out.println("Quale genere di libro vuoi eliminare?");
+		String genere=input.nextLine();
+		if(genere.equals(Genere.HORROR.name())) {
+			for(int i=0; i<biblioteca.getLista_libro_horror().size(); i++) {
+				System.out.println(biblioteca.getLista_libro_horror().get(i));
+			}
+			System.out.println("Inserisci ID Libro:");
+			int id=input.nextInt();
+			biblioteca.getLista_libro_horror().remove(biblioteca.getLista_libro_horror().get(id));
+		}
+		else if(genere.equals(Genere.THRILLER.name())) {
+			for(int i=0; i<biblioteca.getLista_libro_thriller().size(); i++) {
+				System.out.println(biblioteca.getLista_libro_thriller().get(i));
+			}
+			System.out.println("Inserisci ID Libro:");
+			int id=input.nextInt();
+			biblioteca.getLista_libro_thriller().remove(biblioteca.getLista_libro_thriller().get(id));
+		}
+		else if(genere.equals(Genere.ROMANZO.name())) {
+			for(int i=0; i<biblioteca.getLista_libro_romanzo().size(); i++) {
+				System.out.println(biblioteca.getLista_libro_romanzo().get(i));
+			}
+			System.out.println("Inserisci ID Libro:");
+			int id=input.nextInt();
+			biblioteca.getLista_libro_romanzo().remove(biblioteca.getLista_libro_romanzo().get(id));
+		}
+		else if(genere.equals(Genere.STORIA.name())) {
+			for(int i=0; i<biblioteca.getLista_libro_storia().size(); i++) {
+				System.out.println(biblioteca.getLista_libro_storia().get(i));
+			}
+			System.out.println("Inserisci ID Libro:");
+			int id=input.nextInt();
+			biblioteca.getLista_libro_storia().remove(biblioteca.getLista_libro_storia().get(id));
+		}
+		else {
+			System.out.println("Mi dispiace il genere inserito non esiste!");
+		}
 	}
-
-
-
-
-
-		
 
 }
