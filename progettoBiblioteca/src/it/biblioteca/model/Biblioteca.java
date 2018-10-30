@@ -14,6 +14,8 @@ public class Biblioteca {
 	ArrayList<Attore> lista_attore;
 	ArrayList<Scrittore> lista_scrittori;
 	ArrayList<Regista> lista_registi;
+	ArrayList<Libro> listaLibri=new ArrayList<>();
+	//GEt and Set
 	public String getNome() {
 		return nome;
 	}
@@ -56,26 +58,29 @@ public class Biblioteca {
 	public void setListaCliente(ArrayList<Cliente> listaCliente) {
 		this.listaCliente = listaCliente;
 	}
-	
 	public ArrayList<Attore> getLista_attore() {
 		return lista_attore;
 	}
 	public void setLista_attore(ArrayList<Attore> lista_attore) {
 		this.lista_attore = lista_attore;
 	}
-	
 	public ArrayList<Scrittore> getLista_scrittori() {
 		return lista_scrittori;
 	}
 	public void setLista_scrittori(ArrayList<Scrittore> lista_scrittori) {
 		this.lista_scrittori = lista_scrittori;
 	}
-	
 	public ArrayList<Regista> getLista_registi() {
 		return lista_registi;
 	}
 	public void setLista_registi(ArrayList<Regista> lista_registi) {
 		this.lista_registi = lista_registi;
+	}
+	public ArrayList<Libro> getListaLibri() {
+		return listaLibri;
+	}
+	public void setListaLibri(ArrayList<Libro> listaLibri) {
+		this.listaLibri = listaLibri;
 	}
 	public Biblioteca() {
 		super();
@@ -83,7 +88,7 @@ public class Biblioteca {
 	public Biblioteca(String nome, ArrayList<Horror> lista_libro_horror, ArrayList<Thriller> lista_libro_thriller,
 			ArrayList<Bibliotecario> list_bibliotecario, ArrayList<Romanzo> lista_libro_romanzo,
 			ArrayList<Storia> lista_libro_storia, ArrayList<Cliente> listaCliente, ArrayList<Attore> lista_attore,
-			ArrayList<Scrittore> lista_scrittori, ArrayList<Regista> lista_registi) {
+			ArrayList<Scrittore> lista_scrittori, ArrayList<Regista> lista_registi, ArrayList<Libro> listaLibri) {
 		super();
 		this.nome = nome;
 		this.lista_libro_horror = lista_libro_horror;
@@ -95,8 +100,8 @@ public class Biblioteca {
 		this.lista_attore = lista_attore;
 		this.lista_scrittori = lista_scrittori;
 		this.lista_registi = lista_registi;
+		this.listaLibri = listaLibri;
 	}
-	
 	public Biblioteca(String nome) {
 		super();
 		this.nome = nome;

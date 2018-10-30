@@ -33,9 +33,6 @@ public class ClienteServiceImpl implements ClienteService {
 		return cliente;
 	}
 
-		
-		
-
 		@Override
 		public void affittaLibro(Storia storia, Cliente cliente) {
 			System.out.println("inserisci codice cliente  ");
@@ -54,7 +51,6 @@ public class ClienteServiceImpl implements ClienteService {
 			List<Libro>list_tot=new ArrayList<>();
 			for (int i = 0; i <biblioteca.getLista_libro_horror().size(); i++) {
 				list_tot.add(biblioteca.getLista_libro_horror().get(i));
-				
 			}
 			for (int j = 0; j <biblioteca.getLista_libro_thriller().size(); j++) {
 				list_tot.add(biblioteca.getLista_libro_thriller().get(j));
@@ -66,7 +62,7 @@ public class ClienteServiceImpl implements ClienteService {
 				list_tot.add(biblioteca.getLista_libro_storia().get(z));
 			}
 			for (int x = 0; x <list_tot.size(); x++) {
-			System.out.println(list_tot.toString());
+			System.out.println(list_tot.get(x));
 			}
 		}
 
@@ -83,9 +79,6 @@ public class ClienteServiceImpl implements ClienteService {
 			}
 		}
 
-
-
-
 		@Override
 		public void affittaLibro(Horror horror, Cliente cliente) {
 			System.out.println("inserisci codice cliente  ");
@@ -97,9 +90,6 @@ public class ClienteServiceImpl implements ClienteService {
 				cliente.getList_libro().add(horror);
 			}
 		}
-
-
-
 
 		@Override
 		public void affittaLibro(Romanzo romanzo, Cliente cliente) {
@@ -114,9 +104,6 @@ public class ClienteServiceImpl implements ClienteService {
 			
 		}
 
-
-
-
 		@Override
 		public void affittaLibro(Thriller thriller, Cliente cliente) {
 			System.out.println("inserisci codice cliente  ");
@@ -128,9 +115,6 @@ public class ClienteServiceImpl implements ClienteService {
 				cliente.getList_libro().add(thriller);
 			}
 		}
-
-
-
 
 		@Override
 		public void restituisciLibro(Cliente cliente) {
@@ -152,9 +136,6 @@ public class ClienteServiceImpl implements ClienteService {
 			
 			
 		}
-
-
-
 
 		@Override
 		public int controllaData(String data, String data2) {

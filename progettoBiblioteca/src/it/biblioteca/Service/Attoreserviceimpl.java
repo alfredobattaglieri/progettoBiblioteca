@@ -23,13 +23,6 @@ public class Attoreserviceimpl implements AttoreService {
 		long id=attore.incrementaId(attore.getIdCodiceAttore());
 	    biblioteca.getLista_attore().add(attore);
 		return attore;
-		
-	    
-		
-		
-		
-		
-		
 	}
 
 }

@@ -8,6 +8,7 @@ import it.biblioteca.model.Biblioteca;
 import it.biblioteca.model.Film;
 import it.biblioteca.model.Genere;
 import it.biblioteca.model.Horror;
+import it.biblioteca.model.Libro;
 import it.biblioteca.model.Regista;
 import it.biblioteca.model.Romanzo;
 import it.biblioteca.model.Storia;
@@ -28,15 +29,16 @@ public class LibroServiceimpl implements LibroService {
 		System.out.println("inserisci numero di Pagine");
 		int pagine=input.nextInt();
 		input.nextLine();
+		
 		System.out.println("inserisci Genere");
 		String genere=input.nextLine();
-		
 		if(genere.equals(Genere.HORROR.name())) {
 			List<Film> listaHorror=new ArrayList<>();
 			List<Horror> listaLibriHorror=new ArrayList<>();
 			List<Regista> list_registiHorror=new ArrayList<>();
 
 			Horror horror= new Horror(titolo, Autore,pagine,Genere.HORROR.name());
+			horror.incrementaId(horror.getIdCodiceLibro());
 			horror.setList_registiHorror(list_registiHorror);
 			horror.setListaLibriHorror(listaLibriHorror);
 			horror.setListaHorror(listaHorror);

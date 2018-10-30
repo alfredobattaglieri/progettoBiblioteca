@@ -32,6 +32,7 @@ public class runner extends LibroServiceimpl{
 		ArrayList<Thriller> list_libro_thriller=new ArrayList<>();
 		ArrayList<Romanzo> list_libro_romanzo=new ArrayList<>();
 		ArrayList<Storia> list_libro_storia=new ArrayList<>();
+		ArrayList<Libro> list_libri=new ArrayList<>();
 		Biblioteca biblioteca=new Biblioteca("LibriPerTutti");
 		biblioteca.setLista_libro_horror(list_libro_horror);
 		biblioteca.setLista_libro_thriller(list_libro_thriller);
@@ -48,6 +49,7 @@ public class runner extends LibroServiceimpl{
 			Horror horror= new Horror();
 			Thriller thriller=new Thriller();
 			ClienteServiceImpl cliente=new ClienteServiceImpl();
+			
 			switch(scelta) {
 				case 1:
 					System.out.println(biblioteca);
@@ -74,6 +76,7 @@ public class runner extends LibroServiceimpl{
 					break;
 				case 8:
 					cliente.visualizzaLibriThriller(biblioteca);
+					break;
 				case 9:
 					System.out.println("Arrivederci ;)");
 					trovata = false;

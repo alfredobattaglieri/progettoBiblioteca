@@ -1,7 +1,8 @@
 package it.biblioteca.model;
 
 public  abstract class Libro {
-
+	
+	long idCodiceLibro;
 	String titolo;
 	String autore;
 	int pagine;
@@ -9,6 +10,12 @@ public  abstract class Libro {
 	String data;
 	String data_prelievo;
 	
+	public long getIdCodiceLibro() {
+		return idCodiceLibro;
+	}
+	public void setIdCodiceLibro(long idCodiceLibro) {
+		this.idCodiceLibro = idCodiceLibro;
+	}
 	public String getTitolo() {
 		return titolo;
 	}
@@ -53,4 +60,11 @@ public  abstract class Libro {
 	public Libro() {
 		super();
 	}
+	
+	public long incrementaId(long id) {
+		Biblioteca biblioteca=new Biblioteca();
+		id=biblioteca.getListaLibri().size()+1;
+		return id;
+	}
+
 }
