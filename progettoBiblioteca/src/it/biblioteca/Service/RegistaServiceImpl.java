@@ -71,7 +71,7 @@ public class RegistaServiceImpl implements RegistaService {
 
 	@Override
 	public Regista visualizzaRegistaCheHaGiratoPiuFilmGenere(Thriller thriller) {
-		Regista regista2 = null;
+		Regista regista2 = new Regista();
 		for (int j = 0; j < thriller.getList_registaThriller().size(); j++) {
 			if (thriller.getList_registaThriller().get(j).getList_film().size() > regista2.getList_film().size()) {
 				regista2 = thriller.getList_registaThriller().get(j);

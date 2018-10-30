@@ -8,7 +8,7 @@ import it.biblioteca.model.Libro;
 import it.biblioteca.model.Thriller;
 
 public interface ClienteService {
-public Cliente creaCliente(String nome, String cognome, int eta);
+public Cliente creaCliente(Biblioteca biblioteca);
 public void affittaLibro(Libro libro, Cliente cliente);
 public List<Libro> visualizzaTuttiLibri(Biblioteca biblioteca);
 public List<Horror> visualizzaLibriHorror(Biblioteca biblioteca);
