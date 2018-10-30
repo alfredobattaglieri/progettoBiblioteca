@@ -18,6 +18,10 @@ public class Bibliotecario extends Persona{
 		this.idCodiceBibliotecario = idCodiceBibliotecario;
 	}
 	
+	public Bibliotecario() {
+		// TODO Auto-generated constructor stub
+	}
+
 	//to string
 	@Override
 	public String toString() {
