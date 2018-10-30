@@ -8,8 +8,7 @@ import it.biblioteca.model.Libro;
 import it.biblioteca.model.Regista;
 
 public interface BibliotecarioService {
-public Bibliotecario creaBibliotecario(long id);
-public Libro creaLibro(long id);
+public Bibliotecario creaBibliotecario();
 public ArrayList<Regista> visualizzachiHaGiratoPiuFilm();
 public Cliente visualizzaRitardoNellaConsegna();
 public Cliente visualizzaChiLeggeDiPiuUnGenere();;
