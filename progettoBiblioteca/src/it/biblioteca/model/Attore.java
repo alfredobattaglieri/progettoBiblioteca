@@ -22,11 +22,10 @@ public class Attore extends Persona{
 
 	}
 
-	//to string
 	@Override
 	public String toString() {
-		return "Attore [idCodiceAttore=" + idCodiceAttore + ", id=" + id + ", nome=" + nome + ", cognome=" + cognome
-				+ ", eta=" + eta + "]";
+		return "Attore [idCodiceAttore=" + idCodiceAttore + ", nome=" + nome + ", cognome=" + cognome + ", eta=" + eta
+				+ "]";
 	}
 	
 }
