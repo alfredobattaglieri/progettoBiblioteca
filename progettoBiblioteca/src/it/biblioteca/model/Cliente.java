@@ -50,6 +50,11 @@ public class Cliente extends Persona{
 		return "Cliente [idCodiceCliente=" + idCodiceCliente + ", list_libro=" + list_libro + "]";
 	}
 
+	public long incrementaId(long id) {
+		Biblioteca biblioteca=new Biblioteca();
+		id=biblioteca.getListaCliente().size()+1;
+		return id;
+	}
 	
 	
 }

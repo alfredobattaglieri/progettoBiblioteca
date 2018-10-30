@@ -1,5 +1,6 @@
 package it.biblioteca.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 import it.biblioteca.model.Biblioteca;
@@ -16,6 +17,7 @@ public class ClienteServiceImpl implements ClienteService {
 	@Override
 	public Cliente creaCliente(String nome, String cognome, int eta) {
 		// TODO Auto-generated method stub
+		Biblioteca biblioteca=new Biblioteca();
 		Cliente cliente = new Cliente();
 		System.out.println("Crea cliente");
 		System.out.println("Inserisci nome");
@@ -26,9 +28,8 @@ public class ClienteServiceImpl implements ClienteService {
 		cliente.setEta(input.nextInt());
 		input.nextLine();
 		long id=cliente.incrementaId(cliente.getIdCodiceCliente());
-		cliente.setId(id);
-		
-		input.nextLine();
+		cliente.setIdCodiceCliente(id);
+		biblioteca.getListaCliente().add(cliente);
 		return cliente;
 	}
 
@@ -49,19 +50,37 @@ public class ClienteServiceImpl implements ClienteService {
 		}
 
 		@Override
-		public List<Libro> visualizzaTuttiLibri(Biblioteca biblioteca) {
-			return biblioteca.getLista_libro();
-
+		public void visualizzaTuttiLibri(Biblioteca biblioteca) {
+			List<Libro>list_tot=new ArrayList<>();
+			for (int i = 0; i <biblioteca.getLista_libro_horror().size(); i++) {
+				list_tot.add(biblioteca.getLista_libro_horror().get(i));
+				
+			}
+			for (int j = 0; j <biblioteca.getLista_libro_thriller().size(); j++) {
+				list_tot.add(biblioteca.getLista_libro_thriller().get(j));
+			}
+			for (int k = 0; k <biblioteca.getLista_libro_romanzo().size(); k++) {
+				list_tot.add(biblioteca.getLista_libro_romanzo().get(k));
+			}
+			for (int z = 0; z <biblioteca.getLista_libro_storia().size(); z++) {
+				list_tot.add(biblioteca.getLista_libro_storia().get(z));
+			}
+			for (int x = 0; x <list_tot.size(); x++) {
+			System.out.println(list_tot.toString());
+			}
 		}
 
 		@Override
-		public List<Horror> visualizzaLibriHorror(Biblioteca biblioteca) {
-			return biblioteca.getLista_libro_horror();
+		public void visualizzaLibriHorror(Biblioteca biblioteca) {
+			for (int i = 0; i <biblioteca.getLista_libro_horror().size(); i++) {
+				System.out.println(biblioteca.getLista_libro_horror().get(i));
 		}
-
+		}
 		@Override
-		public List<Thriller> visualizzaLibriThriller(Biblioteca biblioteca) {
-			return biblioteca.getLista_libro_thriller();
+		public void visualizzaLibriThriller(Biblioteca biblioteca) {
+			for (int j = 0; j <biblioteca.getLista_libro_thriller().size(); j++) {
+				System.out.println(biblioteca.getLista_libro_thriller().get(j));
+			}
 		}
 
 
