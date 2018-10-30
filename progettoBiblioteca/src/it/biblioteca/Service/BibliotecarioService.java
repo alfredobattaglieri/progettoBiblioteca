@@ -9,7 +9,6 @@ import it.biblioteca.model.Regista;
 
 public interface BibliotecarioService {
 public Bibliotecario creaBibliotecario();
-public ArrayList<Regista> visualizzachiHaGiratoPiuFilm();
 public Cliente visualizzaRitardoNellaConsegna();
 public Cliente visualizzaChiLeggeDiPiuUnGenere();;
 

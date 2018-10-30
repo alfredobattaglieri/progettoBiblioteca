@@ -26,10 +26,8 @@ public class FilmServiceImpl implements FilmService{
 		input.nextLine();
 		System.out.println("GENERE:");
 		String genere = input.nextLine();
-		
 		if(genere.equals(Genere.HORROR.name())) {
 			Film film = new Film(id, titolo, durata, Genere.HORROR);
-			//stampa lista libri horror
 			for(int i=0; i<biblioteca.getLista_libro_horror().size(); i++) {
 				System.out.println(biblioteca.getLista_libro_horror().get(i));
 			}
@@ -38,8 +36,7 @@ public class FilmServiceImpl implements FilmService{
 			Horror horror = (Horror) biblioteca.getLista_libro_horror().get(associaLibro);
 			associaLibroHorror(film, horror);
 		}
-	
-		if(genere.equals( Genere.THRILLER.name())) {
+	if(genere.equals( Genere.THRILLER.name())) {
 			Film film = new Film(id, titolo, durata, Genere.THRILLER);
 			for(int j=0; j<biblioteca.getLista_libro_thriller().size(); j++) {
 				System.out.println(biblioteca.getLista_libro_thriller().get(j));
@@ -49,6 +46,7 @@ public class FilmServiceImpl implements FilmService{
 				Thriller thriller = (Thriller) biblioteca.getLista_libro_thriller().get(associaLibro);
 				associaLibroThriller(film, thriller);
 			}
+	
 	}
 	@Override
 	public void visualizzaLibroIspiratoPiuFilm(Biblioteca biblioteca){
@@ -79,7 +77,7 @@ public class FilmServiceImpl implements FilmService{
 				
 		if(contaH > contaT) {
 			System.out.println(horrorPF);;
-		};
+		}
 		else {
 			System.out.println(thrillerPF);
 		}	
@@ -87,17 +85,6 @@ public class FilmServiceImpl implements FilmService{
 
 	@Override
 	public void associaLibroHorror(Film film, Horror horror) {
-		/*
-		 * //stampa lista libri horror
-			for(int i=0; i<biblioteca.getLista_libro_horror().size(); i++) {
-				biblioteca.getLista_libro_horror().get(i).toString();
-			}
-			System.out.println("SCEGLI IL LIBRO DA ASSOCIARE:");
-			int associaLibro = input.nextInt();
-			Horror horror = (Horror) biblioteca.getLista_libro_horror().get(associaLibro);
-			associaLibroHorror(film, horror);
-		 */
-		//for(int i=0; i<)
 		horror.getListaHorror().add(film);
 	}
 	@Override
